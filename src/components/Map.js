@@ -54,16 +54,16 @@ class Map extends Component {
             );
         }
         this.platform = this.getPlatform();
-        var layers = this.platform.createDefaultLayers();
-        var element = document.getElementById('here-map');
+        let layers = this.platform.createDefaultLayers();
+        let element = document.getElementById('here-map');
         this.map = this.getMap(element, layers.normal.map, {
             center: this.state.center,
             zoom: this.state.zoom,
         });
-        var behavior = new window.H.mapevents.Behavior(new window.H.mapevents.MapEvents(this.map));
+        let behavior = new window.H.mapevents.Behavior(new window.H.mapevents.MapEvents(this.map));
         // eslint-disable-next-line
         // eslint-disable-next-line
-        var ui = this.getUI(this.map, layers);
+        let ui = this.getUI(this.map, layers);
         this.setState({
             ...this.state,
             map: this.map
@@ -76,10 +76,10 @@ class Map extends Component {
     }
 
     changeTheme(theme, style) {
-        var tiles = this.platform.getMapTileService({
+        let tiles = this.platform.getMapTileService({
             'type': 'base'
         });
-        var layer = tiles.createTileLayer(
+        let layer = tiles.createTileLayer(
             'maptile',
             theme,
             256,
@@ -96,7 +96,7 @@ class Map extends Component {
             style = {
                 {
                     width: '100%',
-                    height: '400px',
+                    height: '670px',
                     background: 'grey'
                 }
             }
