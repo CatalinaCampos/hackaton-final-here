@@ -133,8 +133,13 @@ var onResult =(result) => {
     lng: endPoint.longitude
   });
 
+  var marker = new window.H.map.Marker({
+    lat: -33.418834,
+    lng: -70.642285
+  });
+
   // Add the route polyline and the two markers to the map:
-  this.map.addObjects([routeLine, startMarker, endMarker]);
+  this.map.addObjects([routeLine, startMarker, endMarker, marker]);
 
   // Set the map's viewport to make the whole route visible:
   this.map.setViewBounds(routeLine.getBounds());
