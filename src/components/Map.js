@@ -17,6 +17,7 @@ class Map extends Component {
             theme: props.theme,
             style: props.style,
         }
+        this.infoApisWay = this.infoApisWay.bind(this)
     }
 
     getPlatform() {
@@ -30,10 +31,6 @@ class Map extends Component {
     getEvents(map) {
         return new window.H.mapevents.MapEvents(map);
     }
-
-    // getBehavior(events) {
-    //     return new window.H.mapevents.Behavior(events);
-    // }
 
     getUI(map, layers) {
         return new window.H.ui.UI.createDefault(map, layers);
@@ -70,6 +67,16 @@ class Map extends Component {
             map: this.map
         });
 
+
+//     fetch('https://geocoder.api.here.com/6.2/geocode.json?app_id=68jKP099OUN8oLgbd5Jq&app_code=Rb8T_A8l4p9bEPt2eawMCA&gen=8&searchtext=' + this.state.position)
+//     .then((res)=> res.json())
+//     .then((res)=>{
+//         console.log(res);
+    
+// })
+
+
+     
 // Retrieve the target element for the map:
 var targetElement = document.getElementById('root');
 
@@ -153,6 +160,7 @@ router.calculateRoute(routingParameters, onResult,
     });
     }
 
+
     shouldComponentUpdate(props, state) {
         this.changeTheme(props.theme, props.style);
         return false;
@@ -173,6 +181,16 @@ router.calculateRoute(routingParameters, onResult,
         this.map.setBaseLayer(layer);
     }
 
+    infoApisWay = () => {
+        const fetchAsync = async ()=> {
+            const resultAwait = await fetch('https://geocoder.api.here.com/6.2/geocode.json?app_id=68jKP099OUN8oLgbd5Jq&app_code=Rb8T_A8l4p9bEPt2eawMCA&gen=8&searchtext=' + this.state.position);
+            const data = await resultAwait.json();
+        console.log( data)
+        }
+        fetchAsync();
+    }
+
+
     render() {
         return ( 
         <div id = "here-map"
@@ -183,7 +201,10 @@ router.calculateRoute(routingParameters, onResult,
                     background: 'grey'
                 }
             }
-            />
+            >
+            
+            <button onClick={this.infoApisWay}>prueba</button>
+            </div>
         );
     }
 }

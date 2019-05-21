@@ -11,10 +11,11 @@ class App extends Component {
             theme: 'normal.day',
             latitude: false,
             longitude: false,
-            error: null
+            error: null,
         }
 
         this.onChange = this.onChange.bind(this);
+
     }
 
     onChange(evt) {
@@ -26,6 +27,7 @@ class App extends Component {
         });
     }
 
+   
     render() {
         return (
             <div className="App">
@@ -36,6 +38,7 @@ class App extends Component {
                     theme={ this.state.theme }
                 />
                 <ThemeSelector changeTheme={ this.onChange } />
+                
             </div>
         );
     }
