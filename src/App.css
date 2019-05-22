@@ -1,5 +1,5 @@
 body {
-  background-color: #FB8B24;
+  background-color: black;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -7,9 +7,23 @@ body {
   background-color: white;
   height: 15px;
   display: grid;
-  grid-template-columns: 60px 270px 80px;
-  padding: 15px;
-  margin: 10px;
+  grid-template-columns: 25px 32px 100px 135px 45px 20px;
+  padding: 8px;
+}
+
+.gs{
+  width: 25px;
+  height: 15px
+}
+
+.hora{
+  width: 65px;
+  height: 15px;
+}
+
+.porcentaje{
+  width: 40px;
+  height: 15px;
 }
 
 .principalNav {
@@ -22,15 +36,16 @@ body {
   display: grid;
   grid-template-columns: 90px 90px 90px 90px;
   grid-gap: 5px;
-  margin-left: 25px;
-  margin-bottom: 0;
+  overflow: hidden;
 
   align-content: center;
   text-align: center;
+  bottom: 0;
 }
 
 .principalNav > img {
   width: 35px;
+  margin: 25px
 }
 
 
