@@ -7,6 +7,8 @@ class Map extends Component {
 
         this.platform = null;
         this.map = null;
+        this.mLatitude = 0;
+        this.mLogitude =0;
 
         this.state = {
             app_id: props.app_id,
@@ -31,9 +33,9 @@ class Map extends Component {
         return new window.H.mapevents.MapEvents(map);
     }
 
-    // getBehavior(events) {
-    //     return new window.H.mapevents.Behavior(events);
-    // }
+    getBehavior(events) {
+        return new window.H.mapevents.Behavior(events);
+    }
 
     getUI(map, layers) {
         return new window.H.ui.UI.createDefault(map, layers);
@@ -43,6 +45,8 @@ class Map extends Component {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
                 (position) => {
+                    this.mLatitude = position.coords.latitude;
+                    this.mLogitude = position.coords.longitude;
                     this.map.setCenter({
                         lat: position.coords.latitude,
                         lng: position.coords.longitude
@@ -82,9 +86,9 @@ var routingParameters = {
   // The routing mode:
   'mode': 'fastest;car',
   // The start point of the route:
-  'waypoint0': 'geo!-33.417442,-70.6057',
+  'waypoint0': 'geo!-33.4428682,-70.6804532',
   // The end point of the route:
-  'waypoint1': 'geo!-33.454103,-70.688219',
+  'waypoint1': 'geo!-33.433836,-70.685112',
   // To retrieve the shape of the route we choose the route
   // representation mode 'display'
   'representation': 'display'

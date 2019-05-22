@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import ThemeSelector from './components/ThemeSelector';
 import Map from './components/Map';
+import Init from './components/Init';
 
 class App extends Component {
     constructor(props) {
@@ -29,6 +30,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
+            <Init/>
                 <Map
                     app_id="68jKP099OUN8oLgbd5Jq"
                     app_code="Rb8T_A8l4p9bEPt2eawMCA"
