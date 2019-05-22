@@ -1,0 +1,45 @@
+.culturalevent{
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    display: block;
+}
+
+.cinemaInfo{
+    border: 0.5px solid #FF2E63;
+    width: 42px;
+    padding: 0.5%;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 8%;
+}
+
+.details{
+    border-bottom: 2px solid rgb(219, 216, 216);
+    color: #FF2E63;
+    font-weight: bold;
+}
+
+.details > h3 {
+    margin-left: 15%
+
+}
+
+.description{
+    margin-left: 8%;
+    margin-right: 5%;
+}
+
+.address, .time, .price, .calendar {
+    width: 10%;
+}
+
+.addressP, .timeP, .priceP, .calendarP {
+    margin-left: 12%;
+    margin-top: -11%
+}
+
+.detailsEvent{
+    border-bottom: 2px solid gray;
+}
