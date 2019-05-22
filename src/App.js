@@ -1,9 +1,10 @@
 // import React from 'react';
 import React, { Component } from 'react';
 import './App.css';
-import ThemeSelector from './components/ThemeSelector';
-import Map from './components/Map';
-import Init from './components/Init';
+import Welcome from './components/Firebase Config/Welcome'
+// import ThemeSelector from './components/ThemeSelector';
+// import Map from './components/Map';
+// import Init from './components/Init';
 
 class App extends Component {
     constructor(props) {
@@ -30,14 +31,15 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-            <Init/>
-                <Map
+            <Welcome/>
+            {/* <Init/> */}
+                {/* <Map
                     app_id="68jKP099OUN8oLgbd5Jq"
                     app_code="Rb8T_A8l4p9bEPt2eawMCA"
                     zoom="12"
                     theme={this.state.theme}
                 />
-                <ThemeSelector changeTheme={this.onChange} />
+                <ThemeSelector changeTheme={this.onChange} /> */}
             </div>
         );
     }
