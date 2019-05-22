@@ -88,7 +88,6 @@ class App extends Component {
         return (
             <div className="App">
                     <TelephoneNav />
-
                     <Map
                         app_id={this.state.app_id}
                         app_code={this.state.app_code}
