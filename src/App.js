@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
+
+import Profile from '../src/components/Profile/Profile';
+
 import Map from './components/Map';
 import PrincipalFooter from './components/PrincipalFooter/PrincipalFooter'
 import TelephoneNav from './components/TelephoneNav/TelephoneNav'
 import Notification from './components/Notification'
+
 
 class App extends Component {
     constructor(props) {

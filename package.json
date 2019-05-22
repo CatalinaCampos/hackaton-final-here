@@ -2,7 +2,7 @@
   "name": "hackaton",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://CatalinaCampos.github.io/hackaton-final-here",
+  "homepage": "https://hackatonhere-4ee65.firebaseapp.com",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.18",
     "@fortawesome/free-brands-svg-icons": "^5.8.2",
@@ -13,6 +13,7 @@
     "i": "^0.3.6",
     "npm": "^6.9.0",
     "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.8",
     "react-dom": "^16.8.6",
     "react-icons": "^3.7.0",
     "react-scripts": "3.0.1"
@@ -39,5 +40,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AliceInWonderDev/hackaton-final-here.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AliceInWonderDev/hackaton-final-here/issues"
   }
 }
