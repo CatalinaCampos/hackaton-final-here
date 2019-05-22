@@ -75,7 +75,7 @@ export default class Map extends React.Component {
 
          // Retrieve the mapped positions of the requested waypoints:
         startPoint = route.waypoint[0].mappedPosition;
-         endPoint = route.waypoint[1].mappedPosition;
+        endPoint = route.waypoint[1].mappedPosition;
 
             routeShape.forEach(function (point) {
             var parts = point.split(',');

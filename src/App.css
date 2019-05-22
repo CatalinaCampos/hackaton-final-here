@@ -6,10 +6,10 @@ body {
 .telephoneNav {
   background-color: white;
   height: 15px;
-
   display: grid;
   grid-template-columns: 60px 270px 80px;
-  padding: 8px;
+  padding: 15px;
+  margin: 10px;
 }
 
 .principalNav {
