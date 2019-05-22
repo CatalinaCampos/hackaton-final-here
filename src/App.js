@@ -18,7 +18,6 @@ class App extends Component {
        lat: '',
        long: '',
      },
-
    }
 
    this.functionCoordUser = this.functionCoordUser.bind(this);
