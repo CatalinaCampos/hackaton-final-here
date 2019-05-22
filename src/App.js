@@ -10,19 +10,19 @@ class App extends Component {
    this.state = {
     app_id:"68jKP099OUN8oLgbd5Jq",
     app_code:"Rb8T_A8l4p9bEPt2eawMCA",
-     startPoint: {
-       lat: '',
-       long: '',
-     },
-     endPoint: {
-       lat: '',
-       long: '',
-     },
-   }
+    startPoint: {
+        lat: '',
+        long: '',
+    },
+    endPoint: {
+        lat: '',
+        long: '',
+    },
+    }
 
-   this.functionCoordUser = this.functionCoordUser.bind(this);
+    this.functionCoordUser = this.functionCoordUser.bind(this);
 
- }
+}
 
  componentDidMount() {
    if (navigator.geolocation) {
@@ -93,10 +93,8 @@ class App extends Component {
          zoom="13"
          startPoint={this.state.startPoint}
          endPoint={this.state.endPoint}
-
        />
       <SearchDirection coordUser={this.functionCoordUser}/>
-
      </div>
    );
  }
