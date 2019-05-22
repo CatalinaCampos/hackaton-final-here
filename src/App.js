@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import SearchDirection from './components/Search'
 import Map from './components/Map';
+import GS from './images/GS.png';
+import hora from './images/hora.png';
+import porcentaje from './images/porcentaje.png';
 import home from './images/home.png';
 import map from './images/map.png';
 import profile from './images/profile.png';
@@ -98,10 +101,10 @@ class App extends Component {
             <div className="App">
                     <nav className="telephoneNav">
                         < FontAwesomeIcon icon="signal" />
-
+                        <img src={GS} alt="gs" className="gs" />
                         < FontAwesomeIcon icon="wifi" />
-
-
+                        <img src={hora} alt="hora" className="hora" />
+                        <img src={porcentaje} alt="porcentaje" className="porcentaje" />
                         < FontAwesomeIcon icon="battery-three-quarters" />
                     </nav>
 
