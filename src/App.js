@@ -1,9 +1,13 @@
 import React, { Component } from 'react';   
 import './App.css';
+
+import Profile from '../src/components/Profile/Profile';
+
 import Map from './components/Map';
 import PrincipalFooter from './components/PrincipalFooter/PrincipalFooter'
 import TelephoneNav from './components/TelephoneNav/TelephoneNav'
 import Notification from './components/Notification'
+
 
 class App extends Component {
     constructor(props) {
@@ -107,6 +111,12 @@ class App extends Component {
     render() {
         return (
             <div className="App">
+¿
+                
+                    <TelephoneNav /> 
+                        <Profile/>
+                   <Map
+
                     <TelephoneNav />
                     
                 {this.state.hideViewMap && <Map   
@@ -118,12 +128,16 @@ class App extends Component {
                         zoom="13"
                         startPoint={this.state.startPoint}
                         endPoint={this.state.endPoint}
+
+                    /> 
+                     <PrincipalFooter /> 
                     />}
                     {this.state.updateNotifications &&
                         <Notification  />
                     }
                     <PrincipalFooter onSetNotifications={this.ChangeNotifications}
                     onSethideViewMap={this.ChangehideViewMap}/>
+
                     
                 </div>
         )

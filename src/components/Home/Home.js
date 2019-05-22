@@ -6,9 +6,7 @@ import PrincipalFooter from '../PrincipalFooter/PrincipalFooter'
 
 
 class Home extends Component {
-    constructor() {
-        super()
-    }
+    
 
     hola(){
         alert('hola')
