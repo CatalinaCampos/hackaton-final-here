@@ -52,16 +52,16 @@ class Map extends Component {
         }
 
         this.platform = this.getPlatform();
-        var layers = this.platform.createDefaultLayers();
-        var element = document.getElementById('here-map');
+        let layers = this.platform.createDefaultLayers();
+        let element = document.getElementById('here-map');
         this.map = this.getMap(element, layers.normal.map, {
             center: this.state.center,
             zoom: this.state.zoom,
         });
-        var behavior = new window.H.mapevents.Behavior(new window.H.mapevents.MapEvents(this.map));
+        let behavior = new window.H.mapevents.Behavior(new window.H.mapevents.MapEvents(this.map));
         // eslint-disable-next-line
         // eslint-disable-next-line
-        var ui = this.getUI(this.map, layers);
+        let ui = this.getUI(this.map, layers);
         this.setState({
             ...this.state,
             map: this.map
@@ -140,8 +140,13 @@ var onResult =(result) => {
     lng: endPoint.longitude
   });
 
+  var marker = new window.H.map.Marker({
+    lat: -33.418834,
+    lng: -70.642285
+  });
+
   // Add the route polyline and the two markers to the map:
-  this.map.addObjects([routeLine, startMarker, endMarker]);
+  this.map.addObjects([routeLine, startMarker, endMarker, marker]);
 
   // Set the map's viewport to make the whole route visible:
   this.map.setViewBounds(routeLine.getBounds());
@@ -167,10 +172,10 @@ router.calculateRoute(routingParameters, onResult,
     }
 
     changeTheme(theme, style) {
-        var tiles = this.platform.getMapTileService({
+        let tiles = this.platform.getMapTileService({
             'type': 'base'
         });
-        var layer = tiles.createTileLayer(
+        let layer = tiles.createTileLayer(
             'maptile',
             theme,
             256,
@@ -197,7 +202,7 @@ router.calculateRoute(routingParameters, onResult,
             style = {
                 {
                     width: '100%',
-                    height: '400px',
+                    height: '670px',
                     background: 'grey'
                 }
             }

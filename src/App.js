@@ -20,9 +20,9 @@ class App extends Component {
 
     onChange(evt) {
         evt.preventDefault();
-        var change = evt.target.id;
+        let change = evt.target.id;
         this.setState({
-          ...this.state,
+            ...this.state,
             "theme": change,
         });
     }
@@ -35,10 +35,12 @@ class App extends Component {
                     app_id="68jKP099OUN8oLgbd5Jq"
                     app_code="Rb8T_A8l4p9bEPt2eawMCA"
                     zoom="12"
-                    theme={ this.state.theme }
+                    theme={this.state.theme}
                 />
-                <ThemeSelector changeTheme={ this.onChange } />
-                
+
+                <ThemeSelector changeTheme={this.onChange} />
+
+
             </div>
         );
     }
