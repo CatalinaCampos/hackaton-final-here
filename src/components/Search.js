@@ -7,7 +7,6 @@ class SearchDirection extends Component {
     this.state = {
       initialPoint: '',
       lastPoint: '',
-      temp: ''
     }
     this.functionStart = this.functionInitialPoint.bind(this);
     this.functionEnd = this.functionLastPoint.bind(this);
@@ -31,8 +30,8 @@ class SearchDirection extends Component {
       return (
           <div className="App">
             <input onChange={(event) => this.functionInitialPoint(event)}  value={this.state.initialPoint} placeholder=" Punto de inicio"></input>
-            <input onChange={(event) => this.functionLastPoint(event)}  value={this.state.lastPoint}placeholder="Punto de llegada"></input>
-            <button onClick={() => this.props.coordUser(this.state.initialPoint, this.state.lastPoint)} >Ir</button>
+            <input onChange={(event) => this.functionLastPoint(event)}  value={this.state.lastPoint}  placeholder="Punto de llegada"></input>
+            <button onClick={() => this.props.coordUser(this.state.initialPoint, this.state.lastPoint)}>Ir</button>
           </div>
       );
   }

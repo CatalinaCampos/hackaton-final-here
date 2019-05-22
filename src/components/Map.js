@@ -36,6 +36,7 @@ export default class Map extends React.Component {
     var behavior = new window.H.mapevents.Behavior(events);
     // eslint-disable-next-line
     var ui = new window.H.ui.UI.createDefault(this.map, layer)
+    
 }
 
     componentDidUpdate() {
@@ -46,7 +47,9 @@ export default class Map extends React.Component {
         'waypoint1': "geo!" + this.props.endPoint.lat + "," + this.props.endPoint.long,
         'representation': 'display'
         };
-
+    if (this.routeLine) {
+            this.map.removeObjects([this.routeLine, this.startMarker, this.endMarker]);
+        }
         this.onResult = result => {
         console.log(result)
         var route,
@@ -64,6 +67,16 @@ export default class Map extends React.Component {
             linestring = new window.H.geo.LineString();
 
          // Push all the points in the shape into the linestring:
+
+        routeShape.forEach(function (point) {
+            var parts = point.split(',');
+            linestring.pushLatLngAlt(parts[0], parts[1]);
+        });
+
+         // Retrieve the mapped positions of the requested waypoints:
+        startPoint = route.waypoint[0].mappedPosition;
+         endPoint = route.waypoint[1].mappedPosition;
+
             routeShape.forEach(function (point) {
             var parts = point.split(',');
             linestring.pushLatLngAlt(parts[0], parts[1]);
@@ -72,6 +85,7 @@ export default class Map extends React.Component {
          // Retrieve the mapped positions of the requested waypoints:
             startPoint = route.waypoint[0].mappedPosition;
             endPoint = route.waypoint[1].mappedPosition;
+
 
             // Create a polyline to display the route:
             this.routeLine = new window.H.map.Polyline(linestring, {
@@ -90,11 +104,16 @@ export default class Map extends React.Component {
             lng: endPoint.longitude
             });
 
+
+         // Add the route polyline and the two markers to the map:
+        this.map.addObjects([this.routeLine, this.startMarker, this.endMarker]);
+
             // Add the route polyline and the two markers to the map:
             this.map.addObjects([this.routeLine, this.startMarker, this.endMarker]);
 
+
          // Set the map's viewport to make the whole route visible:
-            this.map.setViewBounds(this.routeLine.getBounds());
+        this.map.setViewBounds(this.routeLine.getBounds());
         }
     };
 
