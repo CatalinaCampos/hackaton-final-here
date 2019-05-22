@@ -1,5 +1,5 @@
 body {
-  background-color: #FB8B24;
+  background-color: black;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -37,15 +37,16 @@ body {
   display: grid;
   grid-template-columns: 90px 90px 90px 90px;
   grid-gap: 5px;
-  margin-left: 25px;
-  margin-bottom: 0;
+  overflow: hidden;
 
   align-content: center;
   text-align: center;
+  bottom: 0;
 }
 
 .principalNav > img {
   width: 35px;
+  margin: 25px
 }
 
 
