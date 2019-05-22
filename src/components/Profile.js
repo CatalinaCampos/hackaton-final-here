@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import '../Profile.css';
+import TelephoneNav from './TelephoneNav/TelephoneNav';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faWifi, faSignal, faBatteryThreeQuarters } from '@fortawesome/free-solid-svg-icons'
 import profilePicture from '../images/profilePicture.jpg';
+import PrincipalFooter from './PrincipalFooter/PrincipalFooter';
 library.add(fab, faWifi, faSignal, faBatteryThreeQuarters)
 
 class Profile extends Component {
@@ -12,6 +14,7 @@ class Profile extends Component {
     render() { 
         return ( 
             <div>
+                <TelephoneNav/>
                 <img className="profilePicture" src={profilePicture} alt="profilePicture"/>
                 <h4 className="profileName">Juana Carreño</h4>
                 <div className="activityContainer">
@@ -27,7 +30,7 @@ class Profile extends Component {
                 
                 </div>
                 </div>
-                
+                <PrincipalFooter/>
                 
                 </div>
         );

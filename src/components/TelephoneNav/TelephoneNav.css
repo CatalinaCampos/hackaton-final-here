@@ -1,0 +1,27 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.telephoneNav {
+    background-color: white;
+    height: 15px;
+
+    display: grid;
+    grid-template-columns: 25px 32px 100px 135px 45px 20px;
+    padding: 8px;
+}
+
+.gs{
+    width: 25px;
+    height: 15px
+}
+
+.hora{
+    width: 65px;
+    height: 15px;
+}
+
+.porcentaje{
+    width: 40px;
+    height: 15px;
+}

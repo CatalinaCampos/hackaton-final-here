@@ -1,0 +1,21 @@
+.principalNav {
+    background-color: #FB8B24;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+
+    display: grid;
+    grid-template-columns: 90px 90px 90px 90px;
+    grid-gap: 5px;
+    overflow: hidden;
+
+    align-content: center;
+    text-align: center;
+    bottom: 0;
+}
+
+.principalNav > img {
+    width: 35px;
+    margin: 25px
+}
