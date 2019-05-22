@@ -67,6 +67,7 @@ export default class Map extends React.Component {
             linestring = new window.H.geo.LineString();
 
          // Push all the points in the shape into the linestring:
+
         routeShape.forEach(function (point) {
             var parts = point.split(',');
             linestring.pushLatLngAlt(parts[0], parts[1]);
@@ -76,25 +77,40 @@ export default class Map extends React.Component {
         startPoint = route.waypoint[0].mappedPosition;
          endPoint = route.waypoint[1].mappedPosition;
 
-         // Create a polyline to display the route:
-         this.routeLine = new window.H.map.Polyline(linestring, {
-           style: { strokeColor: 'blue', lineWidth: 2 }
-         });
+            routeShape.forEach(function (point) {
+            var parts = point.split(',');
+            linestring.pushLatLngAlt(parts[0], parts[1]);
+            });
 
-         // Create a marker for the start point:
-         this.startMarker = new window.H.map.Marker({
-           lat: startPoint.latitude,
-           lng: startPoint.longitude
-         });
+         // Retrieve the mapped positions of the requested waypoints:
+            startPoint = route.waypoint[0].mappedPosition;
+            endPoint = route.waypoint[1].mappedPosition;
 
-         // Create a marker for the end point:
-         this.endMarker = new window.H.map.Marker({
-           lat: endPoint.latitude,
-           lng: endPoint.longitude
-         });
+
+            // Create a polyline to display the route:
+            this.routeLine = new window.H.map.Polyline(linestring, {
+            style: { strokeColor: 'blue', lineWidth: 2 }
+            });
+
+            // Create a marker for the start point:
+            this.startMarker = new window.H.map.Marker({
+            lat: startPoint.latitude,
+            lng: startPoint.longitude
+            });
+
+            // Create a marker for the end point:
+            this.endMarker = new window.H.map.Marker({
+            lat: endPoint.latitude,
+            lng: endPoint.longitude
+            });
+
 
          // Add the route polyline and the two markers to the map:
         this.map.addObjects([this.routeLine, this.startMarker, this.endMarker]);
+
+            // Add the route polyline and the two markers to the map:
+            this.map.addObjects([this.routeLine, this.startMarker, this.endMarker]);
+
 
          // Set the map's viewport to make the whole route visible:
         this.map.setViewBounds(this.routeLine.getBounds());
@@ -116,7 +132,7 @@ export default class Map extends React.Component {
 
     render() {
         return (
-            <div ref="here-map" style={{ width: '100%', height: '400px', background: 'grey' }}>
+            <div ref="here-map" style={{ width: '100%', height: '580px', background: 'grey' }}>
             </div>
         );
     }
