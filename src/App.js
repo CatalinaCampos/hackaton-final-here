@@ -1,7 +1,7 @@
 // import React from 'react';
 import React, { Component } from 'react';
 import './App.css';
-import Welcome from './components/Firebase Config/Welcome'
+// import Welcome from './components/Firebase Config/Welcome'
 // import ThemeSelector from './components/ThemeSelector';
 // import Map from './components/Map';
 // import Init from './components/Init';
@@ -31,7 +31,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-            <Welcome/>
+            
             {/* <Init/> */}
                 {/* <Map
                     app_id="68jKP099OUN8oLgbd5Jq"
