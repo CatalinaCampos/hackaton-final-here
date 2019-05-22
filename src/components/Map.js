@@ -3,24 +3,6 @@ import React from 'react';
 
 export default class Map extends React.Component {
     constructor(props) {
-<<<<<<< HEAD
-        super(props);
-
-        this.platform = null;
-        this.map = null;
-        this.mLatitude = 0;
-        this.mLogitude =0;
-
-        this.state = {
-            app_id: props.app_id,
-            app_code: props.app_code,
-            position: null,
-            zoom: props.zoom,
-            map: null,
-            theme: props.theme,
-            style: props.style,
-        }
-=======
     super(props);
 
     this.platform = null;
@@ -35,7 +17,6 @@ export default class Map extends React.Component {
         lng: props.lng,
         },
         zoom: props.zoom,
->>>>>>> 6b6a183159560e4bc9b111bb98625c322f76914f
     }
 }
 
@@ -96,141 +77,26 @@ export default class Map extends React.Component {
         startPoint = route.waypoint[0].mappedPosition;
          endPoint = route.waypoint[1].mappedPosition;
 
-<<<<<<< HEAD
-    getBehavior(events) {
-        return new window.H.mapevents.Behavior(events);
-    }
-=======
             routeShape.forEach(function (point) {
             var parts = point.split(',');
             linestring.pushLatLngAlt(parts[0], parts[1]);
             });
->>>>>>> 6b6a183159560e4bc9b111bb98625c322f76914f
 
          // Retrieve the mapped positions of the requested waypoints:
             startPoint = route.waypoint[0].mappedPosition;
             endPoint = route.waypoint[1].mappedPosition;
 
-<<<<<<< HEAD
-    componentDidMount() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(
-                (position) => {
-                    this.mLatitude = position.coords.latitude;
-                    this.mLogitude = position.coords.longitude;
-                    this.map.setCenter({
-                        lat: position.coords.latitude,
-                        lng: position.coords.longitude
-                    });
-                },
-                (error) => this.setState({
-                    error: error.message
-                })
-            );
-        }
-=======
->>>>>>> 6b6a183159560e4bc9b111bb98625c322f76914f
 
             // Create a polyline to display the route:
             this.routeLine = new window.H.map.Polyline(linestring, {
             style: { strokeColor: 'blue', lineWidth: 2 }
             });
 
-<<<<<<< HEAD
-// Retrieve the target element for the map:
-var targetElement = document.getElementById('root');
-
-// Get the default map types from the platform object:
-var defaultLayers = this.platform.createDefaultLayers();
-
-
-// Create the parameters for the routing request:
-var routingParameters = {
-  // The routing mode:
-  'mode': 'fastest;car',
-  // The start point of the route:
-  'waypoint0': 'geo!-33.4428682,-70.6804532',
-  // The end point of the route:
-  'waypoint1': 'geo!-33.433836,-70.685112',
-  // To retrieve the shape of the route we choose the route
-  // representation mode 'display'
-  'representation': 'display'
-};
-
-// Define a callback function to process the routing response:
-var onResult =(result) => {
-  var route,
-    routeShape,
-    startPoint,
-    endPoint,
-    linestring;
-  if(result.response.route) {
-  // Pick the first route from the response:
-  route = result.response.route[0];
-  // Pick the route's shape:
-  routeShape = route.shape;
-
-  // Create a linestring to use as a point source for the route line
-  linestring = new window.H.geo.LineString();
-
-  // Push all the points in the shape into the linestring:
-  routeShape.forEach(function(point) {
-    var parts = point.split(',');
-    linestring.pushLatLngAlt(parts[0], parts[1]);
-  });
-
-  // Retrieve the mapped positions of the requested waypoints:
-  startPoint = route.waypoint[0].mappedPosition;
-  endPoint = route.waypoint[1].mappedPosition;
-
-  // Create a polyline to display the route:
-  var routeLine = new window.H.map.Polyline(linestring, {
-    style: { strokeColor: 'blue', lineWidth: 10 }
-  });
-
-  // Create a marker for the start point:
-  var startMarker = new window.H.map.Marker({
-    lat: startPoint.latitude,
-    lng: startPoint.longitude
-  });
-
-  // Create a marker for the end point:
-  var endMarker = new window.H.map.Marker({
-    lat: endPoint.latitude,
-    lng: endPoint.longitude
-  });
-
-  var marker = new window.H.map.Marker({
-    lat: -33.418834,
-    lng: -70.642285
-  });
-
-  // Add the route polyline and the two markers to the map:
-  this.map.addObjects([routeLine, startMarker, endMarker, marker]);
-
-  // Set the map's viewport to make the whole route visible:
-  this.map.setViewBounds(routeLine.getBounds());
-  }
-};
-
-// Get an instance of the routing service:
-var router = this.platform.getRoutingService();
-
-// Call calculateRoute() with the routing parameters,
-// the callback and an error callback function (called if a
-// communication error occurs):
-router.calculateRoute(routingParameters, onResult,
-  function(error) {
-    alert(error.message);
-    });
-    }
-=======
             // Create a marker for the start point:
             this.startMarker = new window.H.map.Marker({
             lat: startPoint.latitude,
             lng: startPoint.longitude
             });
->>>>>>> 6b6a183159560e4bc9b111bb98625c322f76914f
 
             // Create a marker for the end point:
             this.endMarker = new window.H.map.Marker({
