@@ -8,8 +8,23 @@ body {
   height: 15px;
 
   display: grid;
-  grid-template-columns: 60px 270px 80px;
+  grid-template-columns: 25px 32px 100px 135px 45px 20px;
   padding: 8px;
+}
+
+.gs{
+  width: 25px;
+  height: 15px
+}
+
+.hora{
+  width: 65px;
+  height: 15px;
+}
+
+.porcentaje{
+  width: 40px;
+  height: 15px;
 }
 
 .principalNav {
