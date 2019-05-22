@@ -12,9 +12,9 @@ class PrincipalFooter extends Component {
         return(
             <nav className="principalNav">
                     <img src={home} alt="home" />
-                    <img src={map} alt="map" />
+                    <img src={map} alt="map" onClick={this.props.onSethideViewMap} />
                     <img src={profile} alt="profile" />
-                    <img src={notifications} alt="notifications" />
+                    <img src={notifications} alt="notifications" onClick={this.props.onSetNotifications}/>
                 </nav>
         )
     }

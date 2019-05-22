@@ -18,6 +18,7 @@ export default class Map extends React.Component {
         },
         zoom: props.zoom,
     }
+
 }
 
     componentDidMount() {
@@ -133,6 +134,7 @@ export default class Map extends React.Component {
     render() {
         return (
             <div ref="here-map" style={{ width: '100%', height: '570px', background: 'grey' }}>
+            
             </div>
         );
     }

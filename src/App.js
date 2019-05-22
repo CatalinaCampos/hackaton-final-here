@@ -1,9 +1,9 @@
 import React, { Component } from 'react';   
 import './App.css';
-import SearchDirection from './components/Search'
 import Map from './components/Map';
 import PrincipalFooter from './components/PrincipalFooter/PrincipalFooter'
 import TelephoneNav from './components/TelephoneNav/TelephoneNav'
+import Notification from './components/Notification'
 
 class App extends Component {
     constructor(props) {
@@ -21,14 +21,20 @@ class App extends Component {
                 long: '',
             },
             updateNotifications: false,
+            hideViewMap: false,
         }
 
         this.functionCoordUser = this.functionCoordUser.bind(this);
-        this.funtionChageUpdateNotifications = this.funtionChageUpdateNotifications.bind(this)
-
+        this.ChangeNotifications = this.ChangeNotifications.bind(this);
+        this.ChangehideViewMap= this.ChangehideViewMap.bind(this)
     }
 
     componentDidMount() {
+        this.setState({
+            ...this.state,
+            hideViewMap: true,
+            updateNotifications: false,
+        })
         if (navigator.geolocation) {
             console.log(navigator.geolocation)
             navigator.geolocation.getCurrentPosition(
@@ -82,10 +88,19 @@ class App extends Component {
         })
     }
 
-    funtionChageUpdateNotifications(){
+    ChangeNotifications(){
         this.setState({
             ...this.state,
             updateNotifications: true,
+            hideViewMap: false
+        })
+    }
+
+    ChangehideViewMap(){
+        this.setState({
+            ...this.state,
+            hideViewMap: true,
+            updateNotifications: false,
         })
     }
 
@@ -93,8 +108,8 @@ class App extends Component {
         return (
             <div className="App">
                     <TelephoneNav />
-
-                    <Map
+                    
+                {this.state.hideViewMap && <Map
                         app_id={this.state.app_id}
                         app_code={this.state.app_code}
                         lat="-33.4489"
@@ -102,8 +117,12 @@ class App extends Component {
                         zoom="13"
                         startPoint={this.state.startPoint}
                         endPoint={this.state.endPoint}
-                    />
-                    <PrincipalFooter />
+                    />}
+                    {this.state.updateNotifications &&
+                        <Notification  />
+                    }
+                    <PrincipalFooter onSetNotifications={this.ChangeNotifications}
+                    onSethideViewMap={this.ChangehideViewMap}/>
                     
                 </div>
         )
