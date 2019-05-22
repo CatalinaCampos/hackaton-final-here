@@ -1,11 +1,8 @@
-body {
-    font-family: 'Poppins', sans-serif;
-}
-
-.telephoneNav {
+.telephoneNav1 {
     position: relative;
     background-color: #ffffff;
     height: 15px;
+    grid-template-columns: 25px 32px 100px 135px 45px 20px;
     display: grid;
     padding: 15px;
     margin: 0;
@@ -17,7 +14,7 @@ body {
     align-items: baseline;
 }
 
-.principalNav {
+.principalNav1 {
     background-color: #FB8B24;
     height: 100px;
     width: 100%;
@@ -54,17 +51,18 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 25px;  
+
 }
 
-.artesMediales{
+.activity{
     position: relative;
-    border-radius: 30px;
+    border-radius: 20px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 25px;  
 }
+
 
 /* MEDIA */
 /* Smartphones (portrait) */
@@ -72,16 +70,37 @@ body {
 .profilePicture{
     position: relative;
 }
+.activitycontainer{
+    justify-items: center;
+    align-items: center;
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+}
 }
 /* iPads (portrait) */
 @media only screen and (min-width : 767px) and (max-width : 1000px)
 and (orientation : portrait){
-    
+    .activitycontainer{
+        justify-items: center;
+        align-items: center;
+        grid-column-gap: 10px;
+        grid-row-gap: 15px;
+    }
 }
 /* Desktop */
 @media only screen and (min-width : 1024px) and (max-width : 1366px){
-    
+    .activitycontainer{
+        justify-items: center;
+        align-items: center;
+        grid-column-gap: 10px;
+        grid-row-gap: 15px;
+    }
 }
 @media only screen and (min-width: 950px){
-    
+    .activitycontainer{
+        justify-items: center;
+        align-items: center;
+        grid-column-gap: 10px;
+        grid-row-gap: 15px;
+    }
 }

@@ -1,9 +1,5 @@
 import React, {Component} from 'react';
 import '../Profile.css';
-import home from '../images/home.png';
-import map from '../images/map.png';
-import profile from '../images/profile.png';
-import notifications from '../images/notifications.png';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab } from '@fortawesome/free-brands-svg-icons';
@@ -16,22 +12,23 @@ class Profile extends Component {
     render() { 
         return ( 
             <div>
-                <nav className="telephoneNav">
-                        < FontAwesomeIcon icon="signal" />
-                        < FontAwesomeIcon icon="wifi" />
-                        < FontAwesomeIcon icon="battery-three-quarters" />
-                </nav>
-
                 <img className="profilePicture" src={profilePicture} alt="profilePicture"/>
                 <h4 className="profileName">Juana Carreño</h4>
-                <button className="artesMediales">Artes Mediales</button>
+                <div className="activityContainer">
+                <div className="row">
+                <button className="activity">Artes Mediales</button>
+                <button className="activity">Artes Visuales</button>
+                <button className="activity">Diseño</button>
+                </div>
+                <div className="row">
+                <button className="activity">Gastronomía</button>
+                <button className="activity">Museo</button>
+                <button className="activity">Música</button>
                 
-                <nav className="principalNav">
-                        <img src={home} alt="home" />
-                        <img src={map} alt="map" />
-                        <img src={profile} alt="profile" />
-                        <img src={notifications} alt="notifications" />
-                </nav>
+                </div>
+                </div>
+                
+                
                 </div>
         );
     }
