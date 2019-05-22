@@ -1,10 +1,15 @@
 body {
   background-color: #FB8B24;
+  font-family: 'Poppins', sans-serif;
 }
 
 .telephoneNav {
   background-color: white;
-  height: 20px;
+  height: 15px;
+
+  display: grid;
+  grid-template-columns: 60px 270px 80px;
+  padding: 8px;
 }
 
 .principalNav {

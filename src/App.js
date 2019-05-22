@@ -10,9 +10,9 @@ import notifications from './images/notifications.png';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faStroopwafel, faHome, faMap } from '@fortawesome/free-solid-svg-icons'
+import { faWifi, faSignal, faBatteryThreeQuarters } from '@fortawesome/free-solid-svg-icons'
 
-library.add(fab, faStroopwafel, faHome, faMap)
+library.add(fab, faWifi, faSignal, faBatteryThreeQuarters )
 
 class App extends Component {
     constructor(props) {
@@ -40,7 +40,14 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <nav className="telephoneNav"></nav>
+                <nav className="telephoneNav">
+                < FontAwesomeIcon icon="signal" />
+                
+                < FontAwesomeIcon icon="wifi" />
+
+
+                < FontAwesomeIcon icon="battery-three-quarters" />
+                </nav>
                 
                 <Map
                     app_id={this.state.app_id}
