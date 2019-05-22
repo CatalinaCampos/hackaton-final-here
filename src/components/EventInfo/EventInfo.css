@@ -22,7 +22,8 @@
 }
 
 .details > h3 {
-    margin-left: 15%
+    margin-left: 15%;
+    margin-top: -11%
 
 }
 
@@ -35,11 +36,13 @@
     width: 10%;
 }
 
+.arrow{
+    width: 40px;
+    margin-left: 2%;
+    margin-top: 5%;
+}
+
 .addressP, .timeP, .priceP, .calendarP {
     margin-left: 12%;
     margin-top: -11%
-}
-
-.detailsEvent{
-    border-bottom: 2px solid gray;
 }

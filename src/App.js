@@ -1,4 +1,4 @@
-import React, { Component } from 'react';   
+import React, { Component } from 'react';
 import './App.css';
 import Map from './components/Map';
 import PrincipalFooter from './components/PrincipalFooter/PrincipalFooter'
@@ -26,7 +26,7 @@ class App extends Component {
 
         this.functionCoordUser = this.functionCoordUser.bind(this);
         this.ChangeNotifications = this.ChangeNotifications.bind(this);
-        this.ChangehideViewMap= this.ChangehideViewMap.bind(this)
+        this.ChangehideViewMap = this.ChangehideViewMap.bind(this)
     }
 
     componentDidMount() {
@@ -58,7 +58,7 @@ class App extends Component {
     }
 
     async functionCoordUser(start, end) {
-        this.startPoint = await fetch("https://geocoder.api.here.com/6.2/geocode.json?app_id=" + this.state.app_id + "&app_code=" + this.state.app_code + "&searchtext=" + start )
+        this.startPoint = await fetch("https://geocoder.api.here.com/6.2/geocode.json?app_id=" + this.state.app_id + "&app_code=" + this.state.app_code + "&searchtext=" + start)
             .then(data => data.json())
             .then(data => {
                 return {
@@ -88,7 +88,7 @@ class App extends Component {
         })
     }
 
-    ChangeNotifications(){
+    ChangeNotifications() {
         this.setState({
             ...this.state,
             updateNotifications: true,
@@ -96,7 +96,7 @@ class App extends Component {
         })
     }
 
-    ChangehideViewMap(){
+    ChangehideViewMap() {
         this.setState({
             ...this.state,
             hideViewMap: true,
@@ -107,25 +107,25 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                    <TelephoneNav />
-                    
-                {this.state.hideViewMap && <Map   
+                <TelephoneNav />
 
-                        app_id={this.state.app_id}
-                        app_code={this.state.app_code}
-                        lat="-33.4489"
-                        lng="-70.6693"
-                        zoom="13"
-                        startPoint={this.state.startPoint}
-                        endPoint={this.state.endPoint}
-                    />}
-                    {this.state.updateNotifications &&
-                        <Notification  />
-                    }
-                    <PrincipalFooter onSetNotifications={this.ChangeNotifications}
-                    onSethideViewMap={this.ChangehideViewMap}/>
-                    
-                </div>
+                {this.state.hideViewMap && <Map
+
+                    app_id={this.state.app_id}
+                    app_code={this.state.app_code}
+                    lat="-33.4489"
+                    lng="-70.6693"
+                    zoom="13"
+                    startPoint={this.state.startPoint}
+                    endPoint={this.state.endPoint}
+                />}
+                {this.state.updateNotifications &&
+                    <Notification />
+                }
+                <PrincipalFooter onSetNotifications={this.ChangeNotifications}
+                    onSethideViewMap={this.ChangehideViewMap} />
+
+            </div>
         )
     }
 }
