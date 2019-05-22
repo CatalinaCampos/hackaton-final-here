@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react';   
 import './App.css';
 import SearchDirection from './components/Search'
 import Map from './components/Map';
+import Notification from './components/Notification';
 import GS from './images/GS.png';
 import hora from './images/hora.png';
 import porcentaje from './images/porcentaje.png';
@@ -32,9 +33,11 @@ class App extends Component {
                 lat: '',
                 long: '',
             },
+            updateNotifications: false,
         }
 
         this.functionCoordUser = this.functionCoordUser.bind(this);
+        this.funtionChageUpdateNotifications = this.funtionChageUpdateNotifications.bind(this)
 
     }
 
@@ -62,7 +65,7 @@ class App extends Component {
     }
 
     async functionCoordUser(start, end) {
-        this.startPoint = await fetch("https://geocoder.api.here.com/6.2/geocode.json?app_id=" + this.state.app_id + "&app_code=" + this.state.app_code + "&searchtext=" + start)
+        this.startPoint = await fetch("https://geocoder.api.here.com/6.2/geocode.json?app_id=" + this.state.app_id + "&app_code=" + this.state.app_code + "&searchtext=" + start )
             .then(data => data.json())
             .then(data => {
                 return {
@@ -85,15 +88,18 @@ class App extends Component {
             ...this.state,
             startPoint: {
                 ...this.startPoint
-
             },
             endPoint: {
                 ...this.endPoint
-
             },
-
         })
+    }
 
+    funtionChageUpdateNotifications(){
+        this.setState({
+            ...this.state,
+            updateNotifications: true,
+        })
     }
 
     render() {
@@ -121,9 +127,10 @@ class App extends Component {
                         <img src={home} alt="home" />
                         <img src={map} alt="map" />
                         <img src={profile} alt="profile" />
-                        <img src={notifications} alt="notifications" />
+                        <img src={notifications} onClick={this.onChangeNotifications} alt="notifications" />
                     </nav>
                     <SearchDirection coordUser={this.functionCoordUser} />
+                    <Notification onChangeNotifications={this.state.funtionChageUpdateNotifications}/>
                 </div>
         )
     }
