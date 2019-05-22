@@ -4,12 +4,26 @@
   "private": true,
   "homepage": "https://hackatonhere-4ee65.firebaseapp.com",
   "dependencies": {
+<<<<<<< HEAD
     "bootstrap": "^4.3.1",
+=======
+    "@fortawesome/fontawesome-svg-core": "^1.2.18",
+    "@fortawesome/free-brands-svg-icons": "^5.8.2",
+    "@fortawesome/free-regular-svg-icons": "^5.8.2",
+    "@fortawesome/free-solid-svg-icons": "^5.8.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+>>>>>>> 6b6a183159560e4bc9b111bb98625c322f76914f
     "gh-pages": "^2.0.1",
+    "i": "^0.3.6",
+    "npm": "^6.9.0",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.8",
     "react-dom": "^16.8.6",
+<<<<<<< HEAD
     "react-router-dom": "^5.0.0",
+=======
+    "react-icons": "^3.7.0",
+>>>>>>> 6b6a183159560e4bc9b111bb98625c322f76914f
     "react-scripts": "3.0.1"
   },
   "scripts": {

@@ -1,33 +1,39 @@
-.App {
+body {
+  background-color: #FB8B24;
+  font-family: 'Poppins', sans-serif;
+}
+
+.telephoneNav {
+  background-color: white;
+  height: 15px;
+
+  display: grid;
+  grid-template-columns: 60px 270px 80px;
+  padding: 8px;
+}
+
+.principalNav {
+  background-color: #FB8B24;
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+
+  display: grid;
+  grid-template-columns: 90px 90px 90px 90px;
+  grid-gap: 5px;
+  margin-left: 25px;
+  margin-bottom: 0;
+
+  align-content: center;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.principalNav > img {
+  width: 35px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
