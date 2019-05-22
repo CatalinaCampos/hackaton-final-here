@@ -3,7 +3,7 @@ import './Home.css'
 import GS from '../images/GS.png';
 import hora from '../images/hora.png';
 import porcentaje from '../images/porcentaje.png';
-import home from '../images/home.png';
+import home from '../components/Home/Home';
 import map from '../images/map.png';
 import profile from '../images/profile.png';
 import notifications from '../images/notifications.png';
@@ -31,21 +31,17 @@ class Home extends Component {
                     <img src={porcentaje} alt="porcentaje" className="porcentaje" />
                     < FontAwesomeIcon icon="battery-three-quarters" />
                 </nav>
-
                 <div className="divEvents"> 
                     <nav>PRÓXIMOS EVENTOS</nav>
                     <div>
-
                     </div>
                 </div>
-
                 <nav className="principalNav">
                     <img src={home} alt="home" />
                     <img src={map} alt="map" />
                     <img src={profile} alt="profile" />
                     <img src={notifications} alt="notifications" />
                 </nav>
-
             </div>
         )
     }

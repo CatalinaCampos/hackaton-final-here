@@ -1,8 +1,4 @@
 import React, {Component} from 'react';
-import home from '../images/home.png';
-import map from '../images/map.png';
-import profile from '../images/profile.png';
-import notifications from '../images/notifications.png';
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 import { fab } from '@fortawesome/free-brands-svg-icons';

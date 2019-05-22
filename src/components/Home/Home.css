@@ -1,0 +1,56 @@
+.divEvents {
+    width: 100%;
+}
+
+.events{
+    border-bottom: 2px solid rgb(219, 216, 216);
+    color: #FF2E63;
+    font-weight: bold;
+}
+
+.events > h3 {
+    margin-left: 10%
+}
+
+.photoEvents{
+    width: 90%;
+    border: 2px transparent;
+    border-radius: 7px;
+    margin-top: 6%;
+    margin-left: auto; /* Los deja centrados */
+    margin-right: auto;
+
+    -webkit-box-shadow: -1px 8px 12px -5px rgba(140,140,140,1);
+    -moz-box-shadow: -1px 8px 12px -5px rgba(140,140,140,1);
+    box-shadow: -1px 8px 12px -5px rgba(140,140,140,1);
+}
+
+.cultural-event{
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.cinema{
+    border: 0.5px solid #FF2E63;
+    width: 42px;
+    padding: 0.5%;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.cinemaP{
+    margin-left: 2%;
+    font-weight: bold;
+    color: #303030;
+    margin-top: 0;
+    padding: 3%
+}
+
+
+
+

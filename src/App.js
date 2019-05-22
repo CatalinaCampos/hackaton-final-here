@@ -2,21 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import SearchDirection from './components/Search'
 import Map from './components/Map';
-import Notification from './components/Notification';
-import GS from './images/GS.png';
-import hora from './images/hora.png';
-import porcentaje from './images/porcentaje.png';
-import home from './images/home.png';
-import map from './images/map.png';
-import profile from './images/profile.png';
-import notifications from './images/notifications.png';
-
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faWifi, faSignal, faBatteryThreeQuarters } from '@fortawesome/free-solid-svg-icons'
-
-library.add(fab, faWifi, faSignal, faBatteryThreeQuarters)
+import PrincipalFooter from './components/PrincipalFooter/PrincipalFooter'
+import TelephoneNav from './components/TelephoneNav/TelephoneNav'
 
 class App extends Component {
     constructor(props) {
@@ -105,14 +92,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                    <nav className="telephoneNav">
-                        < FontAwesomeIcon icon="signal" />
-                        <img src={GS} alt="gs" className="gs" />
-                        < FontAwesomeIcon icon="wifi" />
-                        <img src={hora} alt="hora" className="hora" />
-                        <img src={porcentaje} alt="porcentaje" className="porcentaje" />
-                        < FontAwesomeIcon icon="battery-three-quarters" />
-                    </nav>
+                    <TelephoneNav />
 
                     <Map
                         app_id={this.state.app_id}
@@ -123,14 +103,8 @@ class App extends Component {
                         startPoint={this.state.startPoint}
                         endPoint={this.state.endPoint}
                     />
-                    <nav className="principalNav">
-                        <img src={home} alt="home" />
-                        <img src={map} alt="map" />
-                        <img src={profile} alt="profile" />
-                        <img src={notifications} onClick={this.onChangeNotifications} alt="notifications" />
-                    </nav>
-                    <SearchDirection coordUser={this.functionCoordUser} />
-                    <Notification onChangeNotifications={this.state.funtionChageUpdateNotifications}/>
+                    <PrincipalFooter />
+                    
                 </div>
         )
     }
