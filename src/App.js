@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 // import SearchDirection from './components/Search'
 // import Map from './components/Map';
-import PrincipalFooter from './components/PrincipalFooter/PrincipalFooter'
-import TelephoneNav from './components/TelephoneNav/TelephoneNav'
-import Profile from './components/Profile';
+// import PrincipalFooter from './components/PrincipalFooter/PrincipalFooter'
+// import TelephoneNav from './components/TelephoneNav/TelephoneNav'
+import Profile from '../src/components/Profile/Profile';
 
 class App extends Component {
     constructor(props) {
@@ -89,7 +89,7 @@ class App extends Component {
         return (
             <div className="App">
                 
-                    <TelephoneNav />
+                    {/* <TelephoneNav /> */}
                         <Profile/>
                     {/* <Map
                         app_id={this.state.app_id}
@@ -100,7 +100,7 @@ class App extends Component {
                         startPoint={this.state.startPoint}
                         endPoint={this.state.endPoint}
                     /> */}
-                    <PrincipalFooter />
+                    {/* <PrincipalFooter /> */}
                     
                 </div>
         )
