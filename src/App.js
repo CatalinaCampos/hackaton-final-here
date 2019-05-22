@@ -109,7 +109,8 @@ class App extends Component {
             <div className="App">
                     <TelephoneNav />
                     
-                {this.state.hideViewMap && <Map
+                {this.state.hideViewMap && <Map   
+
                         app_id={this.state.app_id}
                         app_code={this.state.app_code}
                         lat="-33.4489"

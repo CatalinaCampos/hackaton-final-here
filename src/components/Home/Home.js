@@ -10,6 +10,10 @@ class Home extends Component {
         super()
     }
 
+    hola(){
+        alert('hola')
+    }
+
     render() {
         return (
             <div className="App">
@@ -18,7 +22,7 @@ class Home extends Component {
                     <nav className="events">
                         <h3>PRÓXIMOS EVENTOS</h3>
                     </nav>
-                    <div className="photoEvents">
+                    <div className="photoEvents" onClick={this.hola.bind(this)}>
                         <img src={eventocultural} alt="evento" className="cultural-event" />
                         <div className="cinema">Cine</div>
                         <p className="cinemaP">Cine fulldome en planetario de Santiago</p>
