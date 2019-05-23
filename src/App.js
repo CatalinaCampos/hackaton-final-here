@@ -8,8 +8,7 @@ import PrincipalFooter from './components/PrincipalFooter/PrincipalFooter'
 import TelephoneNav from './components/TelephoneNav/TelephoneNav'
 import Notification from './components/Notification'
 import Home from './components/Home/Home'
-// import EventInfo from './components/EventInfo/EventInfo'
-
+import EventInfo from './components/EventInfo/EventInfo'
 
 
 class App extends Component {
@@ -30,12 +29,14 @@ class App extends Component {
             updateNotifications: false,
             hideViewMap: false,
             viewHome: true,
-
+            viewInfoEvent: false
         }
 
         this.functionCoordUser = this.functionCoordUser.bind(this);
         this.changeNotifications = this.changeNotifications.bind(this);
         this.changehideViewMap= this.changehideViewMap.bind(this);
+        this.changeViewHome= this.changeViewHome.bind(this);
+        this.changeViewEvent= this.changeViewEvent.bind(this)
 
     }
 
@@ -115,13 +116,29 @@ class App extends Component {
         })
     }
 
+    changeViewEvent(){
+        this.setState({
+            ...this.state,
+            viewInfoEvent: true,
+            viewHome: false
+        })
+    }
+
+    changeViewHome(){
+        this.setState({
+            ...this.state,
+            viewHome: true,
+            viewInfoEvent: false,
+            
+        })
+    }
 
 
     render() {
         return (
             <div className="App">
                     <TelephoneNav />
-                    <Home/>
+                    
                 {this.state.hideViewMap && <Map   
                         app_id={this.state.app_id}
                         app_code={this.state.app_code}
@@ -130,10 +147,14 @@ class App extends Component {
                         zoom="13"
                         startPoint={this.state.startPoint}
                         endPoint={this.state.endPoint}
-                    />}
+                        />}
                     {this.state.updateNotifications && <Notification/>}
+                    {this.state.viewHome && <Home onChangeViewEvent={this.changeViewEvent}/>}
+                    
                     <PrincipalFooter onSetNotifications={this.changeNotifications}
-                    onSethideViewMap={this.changehideViewMap}/>
+                    onSethideViewMap={this.changehideViewMap} onChangeViewHome={this.changeViewHome}/>
+                    
+                    {this.state.viewInfoEvent && <EventInfo onChangeViewHome={this.changeViewHome} />}
                     
                 </div>
         )

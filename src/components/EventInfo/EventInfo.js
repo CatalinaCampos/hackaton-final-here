@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './EventInfo.css';
 
-import eventocultural from '../../images/eventocultural.jpg'
+import eventdetails from '../../images/eventdetails.png'
 import direccion from '../../images/direccion.png'
 import tiempo from '../../images/tiempo.png'
 import precio from '../../images/precio.png'
@@ -20,11 +20,11 @@ class EventInfo extends Component {
                 < TelephoneNav />
                 <div className="eventInfo">
                     <nav className="details">
-                    <img src={flecha} alt="arrow" className="arrow" />
+                    <img src={flecha} alt="arrow" className="arrow" onClick={this.props.onChangeViewHome} />
                         <h3 className="h3Activity">DETALLES DE LA ACTIVIDAD</h3>
                     </nav> 
                     <div className="detailsEvent">
-                        <img src={eventocultural} alt="evento" className="culturalevent" />
+                        <img src={eventdetails} alt="evento" className="culturalevent" />
                         <div className="cinemaInfo">Cine</div>
                         <p className="description">Películas fulldome 360 inmersiva de temática astronómica.
                             <br />Además, después de cada función se realizan actividades y talleres para disfrutar la astronomía de manera entretenida. Hay 4 películas a disposición

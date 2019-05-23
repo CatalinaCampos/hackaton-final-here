@@ -3,7 +3,7 @@ import './Home.css'
 import eventocultural from '../../images/eventocultural.png'
 import image1 from '../../images/1.png'
 import image2 from '../../images/2.png'
-import image3 from '../../images/3.jpg'
+import image3 from '../../images/3.png'
 import image4 from '../../images/4.png'
 import image5 from '../../images/5.png'
 import TelephoneNav from '../TelephoneNav/TelephoneNav.js'
@@ -19,7 +19,7 @@ class Home extends Component {
                     <nav className="events">
                         <h3 className="h3Events">PRÓXIMOS EVENTOS</h3>
                     </nav> 
-                    <div className="photoEvents" >
+                    <div className="photoEvents" onClick={this.props.onChangeViewEvent}>
                         <img src={eventocultural} alt="evento" className="cultural-event" />
                         <div className="cinema">Cine</div>
                         <p className="cinemaP">Cine fulldome en planetario de Santiago</p>
