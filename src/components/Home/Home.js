@@ -18,7 +18,7 @@ class Home extends Component {
                 <div className="divEvents">
                     <nav className="events">
                         <h3 className="h3Events">PRÓXIMOS EVENTOS</h3>
-                    </nav>
+                    </nav> 
                     <div className="photoEvents" >
                         <img src={eventocultural} alt="evento" className="cultural-event" />
                         <div className="cinema">Cine</div>
