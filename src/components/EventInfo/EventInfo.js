@@ -21,7 +21,8 @@ class EventInfo extends Component {
                 < TelephoneNav />
                 <div className="eventInfo">
                     <nav className="details">
-                        <img src={flecha} alt="arrow" className="arrow" />
+
+                    <img src={flecha} alt="arrow" className="arrow" onClick={this.props.onChangeViewHome} />
                         <h3 className="h3Activity">DETALLES DE LA ACTIVIDAD</h3>
                     </nav>
                     <div className="detailsEvent">

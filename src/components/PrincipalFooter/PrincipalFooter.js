@@ -11,7 +11,7 @@ class PrincipalFooter extends Component {
     render(){
         return(
             <nav className="principalNav">
-                    <img src={home} alt="home" />
+                    <img src={home} alt="home" onClick={this.props.onChangeViewHome} />
                     <img src={map} alt="map" onClick={this.props.onSethideViewMap} />
                     <img src={profile} alt="profile" />
                     <img src={notifications} alt="notifications" onClick={this.props.onSetNotifications}/>

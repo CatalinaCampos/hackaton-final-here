@@ -2,15 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Home from './components/Home/Home';
-import EventInfo from './components/EventInfo/EventInfo'
+//import Home from './components/Home/Home'
 import * as serviceWorker from './serviceWorker';
-import Profile from './components/Profile/Profile';
-import Preferences from './components/Preferences/Preferences';
+// import Profile from './components/Profile/Profile';
 
 
-
-ReactDOM.render(<EventInfo />, document.getElementById('root'));
+ReactDOM.render(<App/>, document.getElementById('root'));
 
 
 
