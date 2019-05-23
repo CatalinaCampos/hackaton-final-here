@@ -20,11 +20,11 @@ class App extends Component {
             app_code: "Rb8T_A8l4p9bEPt2eawMCA",
             startPoint: {
                 lat: '',
-                long: '',
+                lng: '',
             },
             endPoint: {
-                lat: '',
-                long: '',
+                lat: "",
+                lng: "",
             },
             updateNotifications: false,
             hideViewMap: false,
@@ -98,6 +98,13 @@ class App extends Component {
             },
         })
     }
+
+// otrafunction(){
+//     this.setState({
+//         ...this.state,
+//         endPoint: 
+//     })
+// }
 
     changeNotifications(){
         this.setState({
