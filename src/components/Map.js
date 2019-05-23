@@ -105,11 +105,36 @@ export default class Map extends React.Component {
             lng: endPoint.longitude
             });
 
+            this.startMarker = new window.H.map.Marker({
+                lat: -33.4171066,
+                lng: -70.6395131,
+                });
+ 
+            this.startMarker1 = new window.H.map.Marker({
+                lat: -33.4177695,
+                lng: -70.6507466,
+                });
+ 
+            this.startMarker2 = new window.H.map.Marker({
+                lat: -18.4716837,
+                lng: -70.2846041,
+                });
+ 
+            this.startMarker3 = new window.H.map.Marker({
+                lat: -33.4262439,
+                lng: -70.6507595,
+                });
+ 
+            this.startMarker4 = new window.H.map.Marker({
+                lat: -33.4140072,
+                lng: -70.6436514,
+                });
+
          // Add the route polyline and the two markers to the map:
-        this.map.addObjects([this.routeLine, this.startMarker, this.endMarker]);
+        this.map.addObjects([this.routeLine, this.startMarker, this.endMarker, this.startMarker1, this.startMarker2, this.startMarker3, this.startMarker4]);
 
             // Add the route polyline and the two markers to the map:
-            this.map.addObjects([this.routeLine, this.startMarker, this.endMarker]);
+            this.map.addObjects([this.routeLine, this.startMarker, this.endMarker, this.startMarker1, this.startMarker2, this.startMarker3, this.startMarker4]);
 
 
          // Set the map's viewport to make the whole route visible:

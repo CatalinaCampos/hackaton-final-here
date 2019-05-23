@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-
 // import Profile from '../src/components/Profile/Profile';
 
+import Loading from './components/Loading/Loading';
 import Map from './components/Map';
 import PrincipalFooter from './components/PrincipalFooter/PrincipalFooter'
 import TelephoneNav from './components/TelephoneNav/TelephoneNav'
@@ -16,6 +16,7 @@ class App extends Component {
         super(props);
 
         this.state = {
+            isLoading: true,
             app_id: "68jKP099OUN8oLgbd5Jq",
             app_code: "Rb8T_A8l4p9bEPt2eawMCA",
             startPoint: {
@@ -34,17 +35,16 @@ class App extends Component {
 
         this.functionCoordUser = this.functionCoordUser.bind(this);
         this.changeNotifications = this.changeNotifications.bind(this);
-        this.changehideViewMap= this.changehideViewMap.bind(this);
-        this.changeViewHome= this.changeViewHome.bind(this);
-        this.changeViewEvent= this.changeViewEvent.bind(this)
-
+        this.changehideViewMap = this.changehideViewMap.bind(this);
+        this.changeViewHome = this.changeViewHome.bind(this);
+        this.changeViewEvent = this.changeViewEvent.bind(this)
     }
 
     componentDidMount() {
         this.setState({
             ...this.state,
             hideViewMap: false,
-            updateNotifications: false,
+            updateNotifications: false
         })
         if (navigator.geolocation) {
             console.log(navigator.geolocation)
@@ -99,7 +99,7 @@ class App extends Component {
         })
     }
 
-    changeNotifications(){
+    changeNotifications() {
         this.setState({
             ...this.state,
             updateNotifications: true,
@@ -119,7 +119,7 @@ class App extends Component {
         })
     }
 
-    changeViewEvent(){
+    changeViewEvent() {
         this.setState({
             ...this.state,
             viewInfoEvent: true,
@@ -129,41 +129,38 @@ class App extends Component {
         })
     }
 
-    changeViewHome(){
+    changeViewHome() {
         this.setState({
             ...this.state,
             viewHome: true,
             viewInfoEvent: false,
             hideViewMap: false,
             updateNotifications: false,
-            
+
         })
     }
-
 
     render() {
         return (
             <div className="App">
-                    <TelephoneNav />
-                    
-                {this.state.hideViewMap && <Map   
-                        app_id={this.state.app_id}
-                        app_code={this.state.app_code}
-                        lat="-33.4489"
-                        lng="-70.6693"
-                        zoom="13"
-                        startPoint={this.state.startPoint}
-                        endPoint={this.state.endPoint}
-                        />}
-                    {this.state.updateNotifications && <Notification/>}
-                    {this.state.viewHome && <Home onChangeViewEvent={this.changeViewEvent}/>}
-                    
-                    <PrincipalFooter onSetNotifications={this.changeNotifications}
-                    onSethideViewMap={this.changehideViewMap} onChangeViewHome={this.changeViewHome}/>
-                    
-                    {this.state.viewInfoEvent && <EventInfo onChangeViewHome={this.changeViewHome} />}
-                    
-                </div>
+                <TelephoneNav />
+
+                {this.state.hideViewMap && <Map
+                    app_id={this.state.app_id}
+                    app_code={this.state.app_code}
+                    lat="-33.4489"
+                    lng="-70.6693"
+                    zoom="13"
+                    startPoint={this.state.startPoint}
+                    endPoint={this.state.endPoint}
+                />}
+                {this.state.updateNotifications && <Notification />}
+                {this.state.viewHome && <Home onChangeViewEvent={this.changeViewEvent} />}
+
+                <PrincipalFooter onSetNotifications={this.changeNotifications}
+                    onSethideViewMap={this.changehideViewMap} onChangeViewHome={this.changeViewHome} />
+                {this.state.viewInfoEvent && <EventInfo onChangeViewHome={this.changeViewHome} />}
+            </div>
         )
     }
 }
