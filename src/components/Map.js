@@ -161,10 +161,10 @@ export default class Map extends React.Component {
                 {
                     width: '100%',
                     height: '570px',
-                    background: 'grey'
+                    background: 'grey',
+                    marginTop: '8%'
                 }
             } >
-
             </div>
         );
     }
