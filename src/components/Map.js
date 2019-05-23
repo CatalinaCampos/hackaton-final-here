@@ -19,6 +19,7 @@ export default class Map extends React.Component {
                 lng: props.lng,
             },
             zoom: props.zoom,
+            
         }
 
     }
@@ -75,9 +76,9 @@ export default class Map extends React.Component {
             lng: -70.6418162
         });
 
-
         this.map.addObjects([this.startMarker1, this.startMarker2, this.startMarker3, this.startMarker4, this.startMarker5, this.endMarker1 ])
     }
+
 
     componentDidUpdate() {
 
@@ -152,7 +153,6 @@ export default class Map extends React.Component {
         function (error) {
             alert(error.message);
         });
-
     }
 
     render() {
