@@ -9,7 +9,6 @@ import image5 from '../../images/5.png'
 import TelephoneNav from '../TelephoneNav/TelephoneNav.js'
 import PrincipalFooter from '../PrincipalFooter/PrincipalFooter'
 
-
 class Home extends Component {
 
     render() {
