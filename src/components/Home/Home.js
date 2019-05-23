@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import './Home.css'
-import eventocultural from '../../images/eventocultural.jpg'
+import eventocultural from '../../images/eventocultural.png'
 import image1 from '../../images/1.png'
 import image2 from '../../images/2.png'
-import image3 from '../../images/3.jpg'
+import image3 from '../../images/3.png'
 import image4 from '../../images/4.png'
 import image5 from '../../images/5.png'
 import TelephoneNav from '../TelephoneNav/TelephoneNav.js'
 import PrincipalFooter from '../PrincipalFooter/PrincipalFooter'
-
 
 class Home extends Component {
 

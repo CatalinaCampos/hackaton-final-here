@@ -7,7 +7,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 25px;   
+    margin-top: 5px;   
 }
 
 .profileName{
@@ -15,7 +15,7 @@
     display: block;
     margin-left: 20%;
     margin-right: 20%;
-    margin-top: 6%;
+    margin-top: 0px;
 }
 
 .activity{
@@ -23,7 +23,7 @@
     background-color: #ffffff;
     border-radius: 5px;
     border-color: #FF2E63;
-    margin-top: 25px; 
+    margin-top: 5px; 
     display: block;
     margin-left: auto;
     margin-right: auto; 
@@ -66,6 +66,7 @@
     display: block;
     margin: 2%;
     margin-top: 2%;
+    padding-top: 7px;
     
 }
 
@@ -73,18 +74,21 @@
     padding: 0px;
     margin-top: 55px;
     margin-right: auto;
+    padding-left: 10px;
     
 }
 
 #eventNames{
         margin: 0%;
-        
-        
+        padding-top: 15px;  
 }
 
 .perfil{
     color: #FF2E63;
     padding-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 45px;
 
 }
 

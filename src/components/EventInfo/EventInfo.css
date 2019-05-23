@@ -19,10 +19,11 @@
     border-bottom: 2px solid rgb(219, 216, 216);
     color: #FF2E63;
     font-weight: bold;
+    height: 80px;
 }
 
 .h3Activity {
-    margin-left: 15%;
+    margin-left: 16%;
     font-size: 20px;
     font-weight: bold;
     color: #FF2E63;
@@ -42,8 +43,8 @@
 
 .arrow{
     width: 40px;
-    margin-left: 2%;
-    margin-top: 5%;
+    margin-left: 3%;
+    margin-top: 9%;
 }
 
 .addressP, .timeP, .priceP, .calendarP {

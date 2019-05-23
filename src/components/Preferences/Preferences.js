@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './Preferences.css';
 import TelephoneNav from '../TelephoneNav/TelephoneNav';
-import PrincipalFooter from '../PrincipalFooter/PrincipalFooter';
 import Barra from '../../images/Group 3.png';
 
 class Preferences extends Component {

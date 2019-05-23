@@ -22,11 +22,17 @@
 
 .preferences{
     color: #FF2E63;
-    padding-top: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 45px;
+    margin-left: 7%;
+    margin-right: 0%;
 }
 
 .areasInt{
-    padding-top: 5px;
+    padding-top: 15px;
+    margin-left: 7%;
+    margin-right: 0%;
 }
 
 .barra{
@@ -35,6 +41,7 @@
     margin-right: auto;
     width: 85%;
     height: 85%;
+    margin-top: 25px;
 }
 
 .continue{
