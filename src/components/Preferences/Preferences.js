@@ -42,7 +42,6 @@ class Preferences extends Component {
                         <img src={Barra} alt="barra" className="barra"/>
                     </div>
                     <button className="continue">Continuar</button>
-                <PrincipalFooter/>
             </div>
         );
     }

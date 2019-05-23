@@ -12,7 +12,7 @@ class Profile extends Component {
         return ( 
             <div>
                 <TelephoneNav/>
-
+                <div className="container">
                     <h4 className="perfil">PERFIL</h4>
                     <img className="profilePicture" src={profilePicture} alt="profilePicture"/>
                     <h4 className="profileName">Juana Carreño</h4>
@@ -47,9 +47,9 @@ class Profile extends Component {
 
                 <div className="row">
                 <img src={settings} alt="settings" id="profileIconS" className="profileIconS"/>
-                <h4 className="eventNames" id="eventNames">Configurar notificaciones</h4>
+                <h4 className="eventNames" id="eventNames">Config. notificaciones</h4>
                 </div>
-
+                </div>
                 <PrincipalFooter/>
                 
                 </div>
