@@ -1,15 +1,24 @@
 {
   "files": {
-    "main.css": "/hackaton-final-here/static/css/main.2cce8147.chunk.css",
-    "main.js": "/hackaton-final-here/static/js/main.50643c1e.chunk.js",
-    "main.js.map": "/hackaton-final-here/static/js/main.50643c1e.chunk.js.map",
-    "runtime~main.js": "/hackaton-final-here/static/js/runtime~main.647b18f6.js",
-    "runtime~main.js.map": "/hackaton-final-here/static/js/runtime~main.647b18f6.js.map",
-    "static/js/2.6e4a076c.chunk.js": "/hackaton-final-here/static/js/2.6e4a076c.chunk.js",
-    "static/js/2.6e4a076c.chunk.js.map": "/hackaton-final-here/static/js/2.6e4a076c.chunk.js.map",
-    "index.html": "/hackaton-final-here/index.html",
-    "precache-manifest.20f889332c5f1b1eb18aeb16edac8134.js": "/hackaton-final-here/precache-manifest.20f889332c5f1b1eb18aeb16edac8134.js",
-    "service-worker.js": "/hackaton-final-here/service-worker.js",
-    "static/css/main.2cce8147.chunk.css.map": "/hackaton-final-here/static/css/main.2cce8147.chunk.css.map"
+    "main.css": "/static/css/main.508aa908.chunk.css",
+    "main.js": "/static/js/main.ad525e83.chunk.js",
+    "main.js.map": "/static/js/main.ad525e83.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.dad88612.chunk.js": "/static/js/2.dad88612.chunk.js",
+    "static/js/2.dad88612.chunk.js.map": "/static/js/2.dad88612.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.db121079db5e3dc999c35afee2f718ff.js": "/precache-manifest.db121079db5e3dc999c35afee2f718ff.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.508aa908.chunk.css.map": "/static/css/main.508aa908.chunk.css.map",
+    "static/media/1.png": "/static/media/1.8645a1de.png",
+    "static/media/2.png": "/static/media/2.b703579d.png",
+    "static/media/3.png": "/static/media/3.997b428e.png",
+    "static/media/4.png": "/static/media/4.71c8730a.png",
+    "static/media/5.png": "/static/media/5.c1627cf8.png",
+    "static/media/details3.png": "/static/media/details3.e3f1ec7f.png",
+    "static/media/eventdetails.png": "/static/media/eventdetails.528fc36f.png",
+    "static/media/eventocultural.png": "/static/media/eventocultural.d8a7d4ee.png",
+    "static/media/principalpage.png": "/static/media/principalpage.04679bf4.png"
   }
 }
