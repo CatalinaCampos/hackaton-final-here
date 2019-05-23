@@ -18,7 +18,6 @@ class EventInfo extends Component {
     render() {
         return (
             <div>
-                < TelephoneNav />
                 <div className="eventInfo">
                     <nav className="details">
 
@@ -73,8 +72,6 @@ class EventInfo extends Component {
                         </p>
                     </div>
                 </div>
-
-                < PrincipalFooter />
             </div>
         )
     }
