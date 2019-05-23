@@ -4,6 +4,9 @@ import Map from './components/Map';
 import PrincipalFooter from './components/PrincipalFooter/PrincipalFooter'
 import TelephoneNav from './components/TelephoneNav/TelephoneNav'
 import Notification from './components/Notification'
+// import Home from './components/Home/Home'
+// import EventInfo from './components/EventInfo/EventInfo'
+
 
 class App extends Component {
     constructor(props) {
@@ -22,17 +25,20 @@ class App extends Component {
             },
             updateNotifications: false,
             hideViewMap: false,
+            viewHome: true,
+
         }
 
         this.functionCoordUser = this.functionCoordUser.bind(this);
-        this.ChangeNotifications = this.ChangeNotifications.bind(this);
-        this.ChangehideViewMap= this.ChangehideViewMap.bind(this)
+        this.changeNotifications = this.changeNotifications.bind(this);
+        this.changehideViewMap= this.changehideViewMap.bind(this);
+
     }
 
     componentDidMount() {
         this.setState({
             ...this.state,
-            hideViewMap: true,
+            hideViewMap: false,
             updateNotifications: false,
         })
         if (navigator.geolocation) {
@@ -88,7 +94,7 @@ class App extends Component {
         })
     }
 
-    ChangeNotifications(){
+    changeNotifications(){
         this.setState({
             ...this.state,
             updateNotifications: true,
@@ -96,13 +102,16 @@ class App extends Component {
         })
     }
 
-    ChangehideViewMap(){
+    changehideViewMap(){
         this.setState({
             ...this.state,
             hideViewMap: true,
             updateNotifications: false,
+            viewHome: false
         })
     }
+
+
 
     render() {
         return (
@@ -110,7 +119,6 @@ class App extends Component {
                     <TelephoneNav />
                     
                 {this.state.hideViewMap && <Map   
-
                         app_id={this.state.app_id}
                         app_code={this.state.app_code}
                         lat="-33.4489"
@@ -119,11 +127,9 @@ class App extends Component {
                         startPoint={this.state.startPoint}
                         endPoint={this.state.endPoint}
                     />}
-                    {this.state.updateNotifications &&
-                        <Notification  />
-                    }
-                    <PrincipalFooter onSetNotifications={this.ChangeNotifications}
-                    onSethideViewMap={this.ChangehideViewMap}/>
+                    {this.state.updateNotifications && <Notification/>}
+                    <PrincipalFooter onSetNotifications={this.changeNotifications}
+                    onSethideViewMap={this.changehideViewMap}/>
                     
                 </div>
         )

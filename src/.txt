@@ -1,0 +1,30 @@
+this.state.viewHome && <EventInfo onChangeViewEvent={this.changeViewEvent} onChangeViewHome={this.changeViewHome} />}
+
+
+
+    changeViewHome(){
+        this.setState({
+            ...this.state,
+            viewHome: true,
+            viewInfoEvent: false,
+            
+        })
+    }
+
+    changeViewEvent(){
+        this.setState({
+            ...this.state,
+            viewInfoEvent: true,
+            viewHome: false
+        })
+    }
+
+        this.changeViewHome= this.changeViewHome.bind(this);
+        this.changeViewEvent= this.changeViewEvent.bind(this)
+
+
+                    viewInfoEvent: false,
+
+
+
+                    onClick={this.props.onChangeViewHome}
