@@ -8,7 +8,6 @@ import profilePicture from '../../images/profilePicture.jpg';
 import PrincipalFooter from '../PrincipalFooter/PrincipalFooter';
 
 class Profile extends Component {
-    state = {  }
     render() { 
         return ( 
             <div>
@@ -20,18 +19,18 @@ class Profile extends Component {
                     <div className="activityContainer">
                 
                     <div className="row">
-                    <button className="activity">Artes Mediales</button>
-                    <button className="activity">Artes Visuales</button>
+                    <button className="activity">Museo</button>
+                    <button className="activity">Patrimonio Cultural</button>
                     </div>
                     
                     <div className="row">
                         <button className="activity">Gastronomía</button>
-                        <button className="activity">Museo</button>
+                        <button className="activity">Artes Visuales</button>
                         <button className="activity">Música</button>
                     </div>
 
                     <div className="row">
-                        <button className="activity">Música</button>
+                        <button className="activity">Literatura</button>
                         <button className="activity">Teatro</button>
                     </div>
 

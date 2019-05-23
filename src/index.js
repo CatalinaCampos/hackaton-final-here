@@ -6,9 +6,12 @@ import Home from './components/Home/Home';
 import EventInfo from './components/EventInfo/EventInfo'
 import * as serviceWorker from './serviceWorker';
 import Profile from './components/Profile/Profile';
+import Preferences from './components/Preferences/Preferences';
+
 
 
 ReactDOM.render(<Home />, document.getElementById('root'));
+
 
 
 // If you want your app to work offline and load faster, you can change
