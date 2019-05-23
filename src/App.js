@@ -103,7 +103,9 @@ class App extends Component {
         this.setState({
             ...this.state,
             updateNotifications: true,
-            hideViewMap: false
+            hideViewMap: false,
+            viewHome: false,
+            viewInfoEvent: false,
         })
     }
 
@@ -112,7 +114,8 @@ class App extends Component {
             ...this.state,
             hideViewMap: true,
             updateNotifications: false,
-            // viewHome: false
+            viewHome: false,
+            viewInfoEvent: false,
         })
     }
 
@@ -120,7 +123,9 @@ class App extends Component {
         this.setState({
             ...this.state,
             viewInfoEvent: true,
-            viewHome: false
+            viewHome: false,
+            hideViewMap: false,
+            updateNotifications: false,
         })
     }
 
@@ -129,6 +134,8 @@ class App extends Component {
             ...this.state,
             viewHome: true,
             viewInfoEvent: false,
+            hideViewMap: false,
+            updateNotifications: false,
             
         })
     }
