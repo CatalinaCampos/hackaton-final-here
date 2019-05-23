@@ -21,7 +21,7 @@ class EventInfo extends Component {
                 <div className="eventInfo">
                     <nav className="details">
                     <img src={flecha} alt="arrow" className="arrow" />
-                        <h3>DETALLES DE LA ACTIVIDAD</h3>
+                        <h3 className="h3Activity">DETALLES DE LA ACTIVIDAD</h3>
                     </nav> 
                     <div className="detailsEvent">
                         <img src={eventocultural} alt="evento" className="culturalevent" />

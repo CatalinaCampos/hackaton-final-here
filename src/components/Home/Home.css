@@ -4,6 +4,7 @@
 
 .events{
     border-bottom: 2px solid rgb(219, 216, 216);
+    height: 40px;
 }
 
 .h3Events{
@@ -11,7 +12,7 @@
     font-size: 20px;
     font-weight: bold;
     color: #FF2E63;
-    margin-top: 9%;
+    margin-top: 12%;
 }
 
 .photoEvents{
@@ -37,8 +38,25 @@
 
 .cinema{
     border: 0.5px solid #FF2E63;
-    width: 44px;
-    padding: 0.5%;
+    width: 48px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.museo{
+    border: 0.5px solid #FF2E63;
+    width: 65px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.patrimonioCultural{
+    border: 0.5px solid #FF2E63;
+    width: 165px;
     border-radius: 5px;
     text-align: center;
     margin-top: 5%;
