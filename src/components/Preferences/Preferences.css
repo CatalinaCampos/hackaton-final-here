@@ -36,3 +36,16 @@
     width: 85%;
     height: 85%;
 }
+
+.continue{
+    background-color: #FB8B24;
+    color: #ffffff;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    height: 85%;
+    margin-top: 30px;
+    border: 5px;
+
+}

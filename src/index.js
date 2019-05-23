@@ -10,7 +10,7 @@ import Preferences from './components/Preferences/Preferences';
 
 
 
-ReactDOM.render(<Home />, document.getElementById('root'));
+ReactDOM.render(<Preferences />, document.getElementById('root'));
 
 
 
