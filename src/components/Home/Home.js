@@ -7,20 +7,15 @@ import PrincipalFooter from '../PrincipalFooter/PrincipalFooter'
 
 class Home extends Component {
     
-
-    hola(){
-        alert('hola')
-    }
-
     render() {
         return (
             <div className="App">
             <TelephoneNav />
                 <div className="divEvents">
                     <nav className="events">
-                        <h3>PRÓXIMOS EVENTOS</h3>
+                        <h3 className="h3Events">PRÓXIMOS EVENTOS</h3>
                     </nav>
-                    <div className="photoEvents" onClick={this.hola.bind(this)}>
+                    <div className="photoEvents" >
                         <img src={eventocultural} alt="evento" className="cultural-event" />
                         <div className="cinema">Cine</div>
                         <p className="cinemaP">Cine fulldome en planetario de Santiago</p>

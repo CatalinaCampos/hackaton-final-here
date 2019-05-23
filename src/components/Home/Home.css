@@ -4,12 +4,14 @@
 
 .events{
     border-bottom: 2px solid rgb(219, 216, 216);
-    color: #FF2E63;
-    font-weight: bold;
 }
 
-.events > h3 {
-    margin-left: 10%
+.h3Events{
+    margin-left: 10%;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF2E63;
+    margin-top: 9%;
 }
 
 .photoEvents{
@@ -35,7 +37,7 @@
 
 .cinema{
     border: 0.5px solid #FF2E63;
-    width: 42px;
+    width: 44px;
     padding: 0.5%;
     border-radius: 5px;
     text-align: center;
