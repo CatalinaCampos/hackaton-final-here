@@ -117,6 +117,7 @@ export default class Map extends React.Component {
         this.map.setViewBounds(this.routeLine.getBounds());
         }
     };
+}
 
      // Get an instance of the routing service:
     this.router = this.platform.getRoutingService();
@@ -129,7 +130,6 @@ export default class Map extends React.Component {
             alert(error.message);
         });
     }
-}
 
     render() {
         return (
