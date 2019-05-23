@@ -1,0 +1,38 @@
+.activity{
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border-color: #FF2E63;
+    margin-top: 25px; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.activitycontainer{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    justify-items: center;
+    align-items: center;
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+}
+
+.preferences{
+    color: #FF2E63;
+    padding-top: 30px;
+}
+
+.areasInt{
+    padding-top: 30px;
+}
+
+.barra{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    height: 85%;
+}
