@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-//import Home from './components/Home/Home'
+import Home from './components/Home/Home'
+import Map from './components/Map'
+import EventInfo3 from './components/EventInfo3/EventInfo3'
 import * as serviceWorker from './serviceWorker';
 // import Profile from './components/Profile/Profile';
 

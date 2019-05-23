@@ -105,7 +105,6 @@ export default class Map extends React.Component {
             lng: endPoint.longitude
             });
 
-
          // Add the route polyline and the two markers to the map:
         this.map.addObjects([this.routeLine, this.startMarker, this.endMarker]);
 
@@ -133,7 +132,7 @@ export default class Map extends React.Component {
 
     render() {
         return (
-            <div ref="here-map" style={{ width: '100%', height: '570px', background: 'grey' }}>
+            <div ref="here-map" style={{ width: '100%', height: '570px', background: 'grey', marginTop: '8%'  }}>
             
             </div>
         );
