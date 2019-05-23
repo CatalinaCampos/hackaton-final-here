@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import '../Profile/Profile.css';
 import TelephoneNav from '../TelephoneNav/TelephoneNav';
-import create from '../../images/create.png';
 import bookmark from '../../images/bookmark.png';
 import settings from '../../images/settings.png';
 import profilePicture from '../../images/profilePicture.jpg';
