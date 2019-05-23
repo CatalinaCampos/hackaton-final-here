@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './EventInfo.css';
 
-import eventocultural from '../../images/eventocultural.jpg'
+import eventocultural from '../../images/eventocultural.png'
 import direccion from '../../images/direccion.png'
 import tiempo from '../../images/tiempo.png'
 import precio from '../../images/precio.png'
