@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.508aa908.chunk.css",
-    "main.js": "/static/js/main.ad525e83.chunk.js",
-    "main.js.map": "/static/js/main.ad525e83.chunk.js.map",
+    "main.css": "/static/css/main.d66e0c4c.chunk.css",
+    "main.js": "/static/js/main.a0391f22.chunk.js",
+    "main.js.map": "/static/js/main.a0391f22.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
     "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.dad88612.chunk.js": "/static/js/2.dad88612.chunk.js",
-    "static/js/2.dad88612.chunk.js.map": "/static/js/2.dad88612.chunk.js.map",
+    "static/js/2.aa7c6084.chunk.js": "/static/js/2.aa7c6084.chunk.js",
+    "static/js/2.aa7c6084.chunk.js.map": "/static/js/2.aa7c6084.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.db121079db5e3dc999c35afee2f718ff.js": "/precache-manifest.db121079db5e3dc999c35afee2f718ff.js",
+    "precache-manifest.d717bfb3ce0181adf773827d13a5cc2f.js": "/precache-manifest.d717bfb3ce0181adf773827d13a5cc2f.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.508aa908.chunk.css.map": "/static/css/main.508aa908.chunk.css.map",
+    "static/css/main.d66e0c4c.chunk.css.map": "/static/css/main.d66e0c4c.chunk.css.map",
     "static/media/1.png": "/static/media/1.8645a1de.png",
     "static/media/2.png": "/static/media/2.b703579d.png",
     "static/media/3.png": "/static/media/3.997b428e.png",
@@ -19,6 +19,10 @@
     "static/media/details3.png": "/static/media/details3.e3f1ec7f.png",
     "static/media/eventdetails.png": "/static/media/eventdetails.528fc36f.png",
     "static/media/eventocultural.png": "/static/media/eventocultural.d8a7d4ee.png",
-    "static/media/principalpage.png": "/static/media/principalpage.04679bf4.png"
+    "static/media/notification1.png": "/static/media/notification1.77877590.png",
+    "static/media/notification2.png": "/static/media/notification2.08d3a1f7.png",
+    "static/media/notification3.png": "/static/media/notification3.c2eb6f55.png",
+    "static/media/principalpage.png": "/static/media/principalpage.04679bf4.png",
+    "static/media/profilePicture.jpg": "/static/media/profilePicture.f2e6da67.jpg"
   }
 }
