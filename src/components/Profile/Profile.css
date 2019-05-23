@@ -1,0 +1,109 @@
+.profilePicture{
+    background-image: url(../../images/profilePicture.jpg);
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 70px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;   
+}
+
+.profileName{
+    position: relative;
+    display: block;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 6%;
+}
+
+.activity{
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border-color: #FF2E63;
+    margin-top: 25px; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.activitycontainer{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    justify-items: center;
+    align-items: center;
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+}
+
+.profileIcon{
+    padding: 0px;
+    margin-top: 35px;
+    margin-left: 2%;
+    width: 15%;
+    height: 15%;
+}
+
+#profileIconS{
+    padding: 0px;
+    margin-left: 0%;
+    width: 15%;
+    height: 15%;
+    margin: 2%;
+}
+#profileIconC{
+    padding: 0px;
+    width: 15%;
+    height: 15%;
+    margin-left: 3%
+}
+
+#eventNameC{
+    display: block;
+    margin: 2%;
+    margin-top: 2%;
+    
+}
+
+.eventName{
+    padding: 0px;
+    margin-top: 55px;
+    margin-right: auto;
+    
+}
+
+#eventNames{
+        display: block;
+        margin-right: auto;
+        margin: 2%;
+        
+}
+
+.perfil{
+    color: #FF2E63;
+    padding-top: 30px;
+
+}
+
+
+/* MEDIA */
+/* Smartphones (portrait) */
+@media only screen and (min-width : 321px) and (max-width : 480px){
+
+}
+/* iPads (portrait) */
+@media only screen and (min-width : 767px) and (max-width : 1000px)
+and (orientation : portrait){
+
+}
+/* Desktop */
+@media only screen and (min-width : 1024px) and (max-width : 1366px){
+
+}
+@media only screen and (min-width: 950px){
+
+}

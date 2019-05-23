@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 // import Home from './components/Home/Home'
 import * as serviceWorker from './serviceWorker';
+// import Profile from './components/Profile/Profile';
 
 
 ReactDOM.render(<App />, document.getElementById('root'));

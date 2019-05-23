@@ -6,11 +6,13 @@ import direccion from '../../images/direccion.png'
 import tiempo from '../../images/tiempo.png'
 import precio from '../../images/precio.png'
 import calendario from '../../images/calendario.png'
+import flecha from '../../images/flecha.png'
 
 import TelephoneNav from '../TelephoneNav/TelephoneNav'
 import PrincipalFooter from '../PrincipalFooter/PrincipalFooter'
 
 class EventInfo extends Component {
+
 
     render() {
         return (
@@ -18,8 +20,9 @@ class EventInfo extends Component {
                 < TelephoneNav />
                 <div className="eventInfo">
                     <nav className="details">
-                        <h3>DETALLES DE LA ACTIVIDAD</h3>
-                    </nav>
+                    <img src={flecha} alt="arrow" className="arrow" />
+                        <h3 className="h3Activity">DETALLES DE LA ACTIVIDAD</h3>
+                    </nav> 
                     <div className="detailsEvent">
                         <img src={eventocultural} alt="evento" className="culturalevent" />
                         <div className="cinemaInfo">Cine</div>
@@ -57,6 +60,9 @@ class EventInfo extends Component {
                                 10 mayo - 2 junio
                             </div>
 
+                            <div className="interactiveMap">
+
+                            </div>
 
                             {/* Mantener estos 4 br, evita que el PrincipalFooter tape información */}
                             <br />
@@ -64,10 +70,6 @@ class EventInfo extends Component {
                             <br />
                             <br />
                         </p>
-                    </div>
-
-                    <div className="interactiveMap">
-
                     </div>
                 </div>
 

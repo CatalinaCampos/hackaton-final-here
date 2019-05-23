@@ -1,11 +1,15 @@
-import React, { Component } from 'react';   
+import React, { Component } from 'react';
 import './App.css';
+
+// import Profile from '../src/components/Profile/Profile';
+
 import Map from './components/Map';
 import PrincipalFooter from './components/PrincipalFooter/PrincipalFooter'
 import TelephoneNav from './components/TelephoneNav/TelephoneNav'
 import Notification from './components/Notification'
-// import Home from './components/Home/Home'
+import Home from './components/Home/Home'
 // import EventInfo from './components/EventInfo/EventInfo'
+
 
 
 class App extends Component {
@@ -64,7 +68,7 @@ class App extends Component {
     }
 
     async functionCoordUser(start, end) {
-        this.startPoint = await fetch("https://geocoder.api.here.com/6.2/geocode.json?app_id=" + this.state.app_id + "&app_code=" + this.state.app_code + "&searchtext=" + start )
+        this.startPoint = await fetch("https://geocoder.api.here.com/6.2/geocode.json?app_id=" + this.state.app_id + "&app_code=" + this.state.app_code + "&searchtext=" + start)
             .then(data => data.json())
             .then(data => {
                 return {
@@ -102,12 +106,12 @@ class App extends Component {
         })
     }
 
-    changehideViewMap(){
+    changehideViewMap() {
         this.setState({
             ...this.state,
             hideViewMap: true,
             updateNotifications: false,
-            viewHome: false
+            // viewHome: false
         })
     }
 
@@ -117,7 +121,7 @@ class App extends Component {
         return (
             <div className="App">
                     <TelephoneNav />
-                    
+                    <Home/>
                 {this.state.hideViewMap && <Map   
                         app_id={this.state.app_id}
                         app_code={this.state.app_code}
