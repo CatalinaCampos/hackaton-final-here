@@ -25,19 +25,8 @@
     border-color: #FF2E63;
     margin-top: 5px; 
     display: block;
-    margin-left: auto;
-    margin-right: auto; 
-}
-
-.activitycontainer{
-    position: relative;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    justify-items: center;
-    align-items: center;
-    grid-column-gap: 10px;
-    grid-row-gap: 15px;
+    margin-left: 2%;
+    margin-right: 2%; 
 }
 
 .profileIcon{
@@ -79,8 +68,8 @@
 }
 
 #eventNames{
-        margin: 0%;
-        padding-top: 15px;  
+    margin: 0%;
+    padding-top: 15px;  
 }
 
 .perfil{

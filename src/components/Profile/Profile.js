@@ -19,18 +19,18 @@ class Profile extends Component {
                     <div className="activityContainer">
                 
                     <div className="row">
-                    <button className="activity">Museo</button>
-                    <button className="activity">Patrimonio Cultural</button>
+                    <button className="activity">Artes mediales</button>
+                    <button className="activity">Artes visuales</button>
                     </div>
                     
                     <div className="row">
+                        <button className="activity">Diseño</button>
                         <button className="activity">Gastronomía</button>
-                        <button className="activity">Artes Visuales</button>
-                        <button className="activity">Música</button>
+                        <button className="activity">Museo</button>
                     </div>
 
                     <div className="row">
-                        <button className="activity">Literatura</button>
+                        <button className="activity">Música</button>
                         <button className="activity">Teatro</button>
                     </div>
 
