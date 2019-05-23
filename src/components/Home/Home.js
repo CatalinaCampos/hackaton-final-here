@@ -18,8 +18,8 @@ class Home extends Component {
                 <div className="divEvents">
                     <nav className="events">
                         <h3 className="h3Events">PRÓXIMOS EVENTOS</h3>
-                    </nav>
-                    <div className="photoEvents" >
+                    </nav> 
+                    <div className="photoEvents" onClick={this.props.onChangeViewEvent}>
                         <img src={eventocultural} alt="evento" className="cultural-event" />
                         <div className="cinema">Cine</div>
                         <p className="cinemaP">Cine fulldome en planetario de Santiago</p>
