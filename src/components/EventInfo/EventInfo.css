@@ -7,7 +7,7 @@
 
 .cinemaInfo{
     border: 0.5px solid #FF2E63;
-    width: 42px;
+    width: 44px;
     padding: 0.5%;
     border-radius: 5px;
     text-align: center;
@@ -21,19 +21,23 @@
     font-weight: bold;
 }
 
-.details > h3 {
+.h3Activity {
     margin-left: 15%;
-    margin-top: -11%
-
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF2E63;
+    margin-top: -8%
 }
 
 .description{
     margin-left: 8%;
     margin-right: 5%;
+    margin-top: 2%;
 }
 
 .address, .time, .price, .calendar {
     width: 10%;
+    margin-top: -1%
 }
 
 .arrow{
@@ -44,5 +48,5 @@
 
 .addressP, .timeP, .priceP, .calendarP {
     margin-left: 12%;
-    margin-top: -11%
+    margin-top: -10%
 }
