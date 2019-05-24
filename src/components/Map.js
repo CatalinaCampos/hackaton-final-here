@@ -3,7 +3,6 @@ import React from 'react';
 //import { faAdobe } from '@fortawesome/free-brands-svg-icons';
 
 // import { Marker } from 'react-leaflet';
-import Modal from 'react-responsive-modal';
 
 export default class Map extends React.Component {
     constructor(props) {
@@ -13,7 +12,6 @@ export default class Map extends React.Component {
         this.map = null;
 
         this.state = {
-            
             app_id: props.app_id,
             app_code: props.app_code,
             useHTTPS: true,
@@ -25,15 +23,6 @@ export default class Map extends React.Component {
             
         }
     }
-
-    onOpenModal = () => {
-        this.setState({ open: true });
-    };
-    
-    onCloseModal = () => {
-        this.setState({ open: false });
-    };
-    
 
     componentDidMount() {
         this.platform = new window.H.service.Platform(this.state);
@@ -52,8 +41,6 @@ export default class Map extends React.Component {
         // eslint-disable-next-line
         var ui = new window.H.ui.UI.createDefault(this.map, layer)
 
-        // Create a marker for the point:
-        
         var pngIcon = new window.H.map.Icon("https://i.imgur.com/MbZ6QdK.png", {size: {w: 50, h: 45}})
         var pngIcon1 = new window.H.map.Icon("https://i.imgur.com/sLnNP8I.png", {size: {w: 50, h: 45}})
         var pngIcon2 = new window.H.map.Icon("https://i.imgur.com/tduwYUo.png", {size: {w: 50, h: 45}})
@@ -110,16 +97,13 @@ export default class Map extends React.Component {
 
         this.map.addObjects([this.startMarker, this.startMarker1, this.startMarker2, this.startMarker3, this.startMarker4, this.startMarker5 /*this.endMarker1*/])
 
-
-        this.map.addObjects([this.startMarker1, this.startMarker2, this.startMarker3, this.startMarker4, this.startMarker5, this.endMarker1 ])
-
         this.startMarker1.addEventListener('tap', function (evt) {
             function showAlert(evt){
                 return alert("Museo-Patrimonio Culural, Ubicado en: Av Recoleta 683")
             }  
             showAlert()          
         }, false);
-        
+
 
         this.startMarker2.addEventListener('tap', function (evt) {
             alert("Cementerio General, Ubicado en: Profesor Alberto Zañartu 951, Recoleta")
@@ -136,7 +120,7 @@ export default class Map extends React.Component {
         this.startMarker5.addEventListener('tap', function (evt) {
             alert("Recoleta Franciscana, Ubicado en: Av Recoleta 220")
         }, false);
-      
+
     }
 
 
@@ -157,70 +141,51 @@ export default class Map extends React.Component {
         }
         console.log("fuera de los if");
 
-    this.onResult = result => {
-        console.log(result)
-        var route,
-            routeShape,
-            startPoint,
-            endPoint,
-            linestring;
-        if (result.response && result.response.route) {
-            // Pick the first route from the response:
-            route = result.response.route[0];
-            // Pick the route's shape:
-            routeShape = route.shape;
-            // Create a linestring to use as a point source for the route line
-            linestring = new window.H.geo.LineString();
-            // Push all the points in the shape into the linestring:
-            routeShape.forEach(function (point) {
-                var parts = point.split(',');
-                linestring.pushLatLngAlt(parts[0], parts[1]);
-            });
-            // Retrieve the mapped positions of the requested waypoints:
-            startPoint = route.waypoint[0].mappedPosition;
-            endPoint = route.waypoint[1].mappedPosition;
+        this.onResult = result => {
+            console.log(result)
+            var route,
+                routeShape,
+                startPoint,
+                endPoint,
+                linestring;
+            if (result.response && result.response.route) {
+                // Pick the first route from the response:
+                route = result.response.route[0];
+                // Pick the route's shape:
+                routeShape = route.shape;
+                // Create a linestring to use as a point source for the route line
+                linestring = new window.H.geo.LineString();
+                // Push all the points in the shape into the linestring:
+                routeShape.forEach(function (point) {
+                    var parts = point.split(',');
+                    linestring.pushLatLngAlt(parts[0], parts[1]);
+                });
+                // Retrieve the mapped positions of the requested waypoints:
+                startPoint = route.waypoint[0].mappedPosition;
+                endPoint = route.waypoint[1].mappedPosition;
 
-        this.startMarker = new window.H.map.Marker({
-            lat: startPoint.latitude,
-            lng: startPoint.longitude,
-        });
+                this.startMarker = new window.H.map.Marker({
+                    lat: startPoint.latitude,
+                    lng: startPoint.longitude,
+                });
+                this.endMarker = new window.H.map.Marker({
+                    lat: endPoint.latitude,
+                    lng: endPoint.longitude,
+                });
+                // Create a polyline to display the route:
+                this.routeLine = new window.H.map.Polyline(linestring, {
+                    style: {
+                        strokeColor: 'blue',
+                        lineWidth: 2
+                    }
+                });
 
-        this.startMarker.addEventListener('tap', function (evt) {
-            // event target is the marker itself, group is a parent event target
-            // for all objects that it contains
-            var bubble =  new window.H.ui.InfoBubble(evt.target.getPosition(this.addObjects), {
-                
-                // read custom data
-                content: evt.target.getData()
-            });
-            // show info bubble
-            window.H.ui.addBubble(bubble);
-        }, false);
-        
-        
-
-        this.endMarker = new window.H.map.Marker({
-            lat: endPoint.latitude,
-            lng: endPoint.longitude,
-        });
-        // Create a polyline to display the route:
-        this.routeLine = new window.H.map.Polyline(linestring, {
-            style: {
-                strokeColor: 'blue',
-                lineWidth: 2
+                // Add the route polyline and the two markers to the map:
+                this.map.addObjects([this.routeLine, this.startMarker, this.endMarker]);
+                // Set the map's viewport to make the whole route visible:
+                this.map.setViewBounds(this.routeLine.getBounds());
             }
-        });
-
-            // Add the route polyline and the two markers to the map:
-            this.map.addObjects([this.routeLine, this.startMarker, this.endMarker]);
-            // Set the map's viewport to make the whole route visible:
-            this.map.setViewBounds(this.routeLine.getBounds());
-
-            this.startMarker.addEventListener('tap', function (evt) {
-                alert("message"+evt)
-            }, false);
-        }
-    };
+        };
 
         // Get an instance of the routing service:
         this.router = this.platform.getRoutingService();
@@ -236,21 +201,15 @@ export default class Map extends React.Component {
     }
 
     render() {
-
-        return ( 
-            <div>
-        <div ref = "here-map"
-            style = {
-
+        return (<div ref="here-map"
+            style={
+                {
                     width: '100%',
                     height: '570px',
                     background: 'grey',
                     marginTop: '8%'
                 }
             } >
-
-            </div>
-
         </div>
         );
     }

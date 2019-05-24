@@ -12,29 +12,6 @@ class Profile extends Component {
     render() {
         return (
             <div>
-
-                <TelephoneNav/>
-                <div className="container">
-                    <h4 className="perfil">PERFIL</h4>
-                    <img className="profilePicture" src={profilePicture} alt="profilePicture"/>
-                    <h4 className="profileName">Juana Carreño</h4>
-                    <div className="activityContainer">
-                
-                    <div className="row">
-                    <button className="activity">Artes mediales</button>
-                    <button className="activity">Artes visuales</button>
-                    </div>
-                    
-                    <div className="row">
-                        <button className="activity">Diseño</button>
-                        <button className="activity">Gastronomía</button>
-                        <button className="activity">Museo</button>
-                    </div>
-
-                    <div className="row">
-                        <button className="activity">Música</button>
-                        <button className="activity">Teatro</button>
-
                 <TelephoneNav />
                 <nav className="profileNav">
                     <h3 className="perfil">PERFIL</h3>
