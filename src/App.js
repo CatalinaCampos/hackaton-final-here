@@ -12,6 +12,7 @@ import EventInfo from './components/EventInfo/EventInfo'
 import EventInfo2 from './components/EventInfo2/EventInfo2'
 import EventInfo3 from './components/EventInfo3/EventInfo3'
 import Profile from './components/Profile/Profile';
+import Loading from './components/Loading/Loading';
 
 
 class App extends Component {
@@ -53,10 +54,11 @@ class App extends Component {
     }
 
     componentDidMount() {
+        this.timerHandle = setTimeout(() => this.setState({ isLoading: false }), 3000); 
         this.setState({
             ...this.state,
             hideViewMap: false,
-            updateNotifications: false
+            updateNotifications: false,
         })
         if (navigator.geolocation) {
             console.log(navigator.geolocation)
@@ -77,6 +79,13 @@ class App extends Component {
                     })
                 }
             );
+        }
+    }
+
+    componentWillUnmount(){
+        if (this.timerHandle) {
+            clearTimeout(this.timerHandle);
+            this.timerHandle = 0;
         }
     }
 
@@ -233,7 +242,7 @@ class App extends Component {
 
     render() {
         return (
-            <div className="App">
+            this.state.isLoading ? <Loading/> : <div className="App">
                 <TelephoneNav />
                 {this.state.hideViewMap && <Map
                     app_id={this.state.app_id}
