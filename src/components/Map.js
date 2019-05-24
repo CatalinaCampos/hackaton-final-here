@@ -1,6 +1,6 @@
 import React from 'react';
-import { faGrimace } from '@fortawesome/free-solid-svg-icons';
-import { faAdobe } from '@fortawesome/free-brands-svg-icons';
+//import { faGrimace } from '@fortawesome/free-solid-svg-icons';
+//import { faAdobe } from '@fortawesome/free-brands-svg-icons';
 
 // import { Marker } from 'react-leaflet';
 
@@ -42,8 +42,8 @@ export default class Map extends React.Component {
         var ui = new window.H.ui.UI.createDefault(this.map, layer)
 
         var pngIcon = new window.H.map.Icon("https://i.imgur.com/MbZ6QdK.png", {size: {w: 50, h: 45}})
-        var pngIcon1 = new window.H.map.Icon("https://i.imgur.com/8y9vT3N.png", {size: {w: 50, h: 45}})
-        var pngIcon2 = new window.H.map.Icon("https://i.imgur.com/a8XYtio.png", {size: {w: 50, h: 45}})
+        var pngIcon1 = new window.H.map.Icon("https://i.imgur.com/sLnNP8I.png", {size: {w: 50, h: 45}})
+        var pngIcon2 = new window.H.map.Icon("https://i.imgur.com/tduwYUo.png", {size: {w: 50, h: 45}})
         // Create a marker for the point:
 
         this.startMarker = new window.H.map.Marker({

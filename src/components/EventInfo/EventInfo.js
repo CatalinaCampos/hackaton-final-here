@@ -9,9 +9,6 @@ import precio from '../../images/precio.png'
 import calendario from '../../images/calendario.png'
 import flecha from '../../images/flecha.png'
 
-import TelephoneNav from '../TelephoneNav/TelephoneNav'
-import PrincipalFooter from '../PrincipalFooter/PrincipalFooter'
-
 class EventInfo extends Component {
 
 
@@ -47,17 +44,17 @@ class EventInfo extends Component {
                             </div>
                             <br />
 
-                            <img src={tiempo} alt="" className="time" />
+                            <img src={tiempo} alt="time" className="time" />
                             <div className="timeP">
                                 45 minutos
                             </div>
                             <br />
-                            <img src={precio} alt="" className="price" />
+                            <img src={precio} alt="price" className="price" />
                             <div className="priceP">
                                 $4.700 adultos, $3.700 niños
                             </div>
                             <br />
-                            <img src={calendario} alt="" className="calendar" />
+                            <img src={calendario} alt="calendar" className="calendar" />
                             <div className="calendarP">
                                 10 mayo - 2 junio
                             </div>
