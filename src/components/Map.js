@@ -1,4 +1,10 @@
 import React from 'react';
+import './Map.css'
+import bubble1 from '../images/bubble1.png'
+import bubble2 from '../images/bubble2.png'
+import bubble3 from '../images/bubble3.jpg'
+import bubble4 from '../images/bubble4.png'
+import bubble5 from '../images/bubble5.png'
 //import { faGrimace } from '@fortawesome/free-solid-svg-icons';
 //import { faAdobe } from '@fortawesome/free-brands-svg-icons';
 
@@ -20,7 +26,7 @@ export default class Map extends React.Component {
                 lng: props.lng,
             },
             zoom: props.zoom,
-            
+
         }
     }
 
@@ -41,9 +47,9 @@ export default class Map extends React.Component {
         // eslint-disable-next-line
         var ui = new window.H.ui.UI.createDefault(this.map, layer)
 
-        var pngIcon = new window.H.map.Icon("https://i.imgur.com/MbZ6QdK.png", {size: {w: 50, h: 45}})
-        var pngIcon1 = new window.H.map.Icon("https://i.imgur.com/sLnNP8I.png", {size: {w: 50, h: 45}})
-        var pngIcon2 = new window.H.map.Icon("https://i.imgur.com/tduwYUo.png", {size: {w: 50, h: 45}})
+        var pngIcon = new window.H.map.Icon("https://i.imgur.com/MbZ6QdK.png", { size: { w: 50, h: 45 } })
+        var pngIcon1 = new window.H.map.Icon("https://i.imgur.com/sLnNP8I.png", { size: { w: 50, h: 45 } })
+        var pngIcon2 = new window.H.map.Icon("https://i.imgur.com/tduwYUo.png", { size: { w: 50, h: 45 } })
         // Create a marker for the point:
 
         this.startMarker = new window.H.map.Marker({
@@ -57,36 +63,111 @@ export default class Map extends React.Component {
             lat: -33.39471,
             lng: -70.64264
         }, {
-            icon: pngIcon1
-        });
+                icon: pngIcon1
+            });
 
-        this.startMarker2 = new window.H.map.Marker({ /* Heroinas */ 
+            this.startMarker1.setData(
+                `<img src=${bubble1} alt="Notificacion" class="detailBubble1" />  
+                <p>Museo de guardar</p> 
+                <p> Av. Recoleta 683</p>
+                <button>¿Cómo llegar?</button>`);
+            this.startMarker1.addEventListener('tap', event => {
+                const bubble = new window.H.ui.InfoBubble(
+                    event.target.getPosition(),
+                    {
+                        content: event.target.getData()
+                    }
+                );
+                ui.addBubble(bubble)
+            }, false);
+
+        this.startMarker2 = new window.H.map.Marker({ /* Heroinas */
             lat: -33.417769,
             lng: -70.650747
         }, {
-            icon: pngIcon1
-        });
+                icon: pngIcon1
+            });
+
+            this.startMarker2.setData(`
+            <img src=${bubble2} alt="Notificacion" class="detailBubble1" />  
+            <p>Heroínas de nuestra historia</p> 
+            <p>Profesor Alberto Zañartu 951</p>
+            <button>¿Cómo llegar?</button>`);
+            this.startMarker2.addEventListener('tap', event => {
+                const bubble = new window.H.ui.InfoBubble(
+                    event.target.getPosition(),
+                    {
+                        content: event.target.getData()
+                    }
+                );
+                ui.addBubble(bubble)
+            }, false);
 
         this.startMarker3 = new window.H.map.Marker({ /* La chascona PAGADO*/
             lat: -33.43107,
             lng: -70.60454
         }, {
-            icon: pngIcon2
-        });
+                icon: pngIcon2
+            });
+
+            this.startMarker3.setData(`
+            <img src=${bubble3} alt="Notificacion" class="detailBubble1" />  
+            <p>Casa museo la Chascona</p> 
+            <p>Fernando Márquez de la Plata 0192</p>
+            <button>¿Cómo llegar?</button>`);
+            this.startMarker3.addEventListener('tap', event => {
+                const bubble = new window.H.ui.InfoBubble(
+                    event.target.getPosition(),
+                    {
+                        content: event.target.getData()
+                    }
+                );
+                ui.addBubble(bubble)
+            }, false);
 
         this.startMarker4 = new window.H.map.Marker({ /* Cementerio  */
             lat: -33.4162901,
             lng: -70.6483638,
         }, {
-            icon: pngIcon1
-        });
+                icon: pngIcon1
+            });
+
+            this.startMarker4.setData(`
+            <img src=${bubble4} alt="Notificacion" class="detailBubble1" />  
+            <p>Historia, memoria y derechos humanos</p> 
+            <p>Av. Valdivieso 596</p>
+            <button>¿Cómo llegar?</button>`);
+            this.startMarker4.addEventListener('tap', event => {
+                const bubble = new window.H.ui.InfoBubble(
+                    event.target.getPosition(),
+                    {
+                        content: event.target.getData()
+                    }
+                );
+                ui.addBubble(bubble)
+            }, false);
 
         this.startMarker5 = new window.H.map.Marker({ /* Recorrido cementerio */
             lat: -33.3991974,
             lng: -70.6428294,
         }, {
-            icon: pngIcon1
-        });
+                icon: pngIcon1
+            });
+
+            this.startMarker5.setData(`
+            <img src=${bubble5} alt="Notificacion" class="detailBubble1" />  
+            <p>Recorrido patrimonial Recoleta Franciscana</p> 
+            <p>Av. Recoleta 220</p>
+            <button>¿Cómo llegar?</button>`);
+            this.startMarker5.addEventListener('tap', event => {
+                const bubble = new window.H.ui.InfoBubble(
+                    event.target.getPosition(),
+                    {
+                        content: event.target.getData()
+                    }
+                );
+                ui.addBubble(bubble)
+            }, false);
 
         /*this.endMarker1 = new window.H.map.Marker({
             lat: -33.4190702,
@@ -97,44 +178,26 @@ export default class Map extends React.Component {
 
         this.map.addObjects([this.startMarker, this.startMarker1, this.startMarker2, this.startMarker3, this.startMarker4, this.startMarker5 /*this.endMarker1*/])
 
-        this.startMarker1.addEventListener('tap', function (evt) {
-            function showAlert(evt){
-                return alert("Museo-Patrimonio Culural, Ubicado en: Av Recoleta 683")
-            }  
-            showAlert()          
-        }, false);
+        /*ui.addBubble(startMarker1);
+        startMarker1.addEventListener('tap', () => {
+            startMarker1.getElement().addEventListener('mouseover', function (e) {
+                console.log('hello there');
+            })
+            }); */
 
-
-        this.startMarker2.addEventListener('tap', function (evt) {
-            alert("Cementerio General, Ubicado en: Profesor Alberto Zañartu 951, Recoleta")
-        }, false);
-
-        this.startMarker3.addEventListener('tap', function (evt) {
-            alert("Museo La Chascona, Ubicado en: Fernando Márquez de la Plata 192")
-        }, false);
-
-        this.startMarker4.addEventListener('tap', function (evt) {
-            alert("Cementerio General, Ubicado en: Av. Valdivieso 596, Recoleta ")
-        }, false);
-
-        this.startMarker5.addEventListener('tap', function (evt) {
-            alert("Recoleta Franciscana, Ubicado en: Av Recoleta 220")
-        }, false);
-
-    }
-
+        }
 
     componentDidUpdate() {
 
-        console.log("primer if");
+                console.log("primer if");
 
-        this.routingParameters = {
-            'mode': 'fastest;pedestrian',
-            'waypoint0': "geo!" + this.props.lat + "," + this.props.lng,
-            'waypoint1': "geo!" + this.props.lat + "," + this.props.lng,
-            'representation': 'display'
-        };
-        if (this.routeLine) {
+                this.routingParameters = {
+                    'mode': 'fastest;pedestrian',
+                    'waypoint0': "geo!" + this.props.lat + "," + this.props.lng,
+                    'waypoint1': "geo!" + this.props.lat + "," + this.props.lng,
+                    'representation': 'display'
+                };
+                if(this.routeLine) {
             console.log("segundo if");
 
             this.map.removeObjects([this.routeLine, this.startMarker, this.endMarker]);
@@ -190,13 +253,13 @@ export default class Map extends React.Component {
         // Get an instance of the routing service:
         this.router = this.platform.getRoutingService();
 
-    // Call calculateRoute() with the routing parameters,
-    // the callback and an error callback function (called if a
-    // communication error occurs):
-    this.router.calculateRoute(this.routingParameters, this.onResult,
-        function (error) {
-            alert(error.message);
-        });
+        // Call calculateRoute() with the routing parameters,
+        // the callback and an error callback function (called if a
+        // communication error occurs):
+        this.router.calculateRoute(this.routingParameters, this.onResult,
+            function (error) {
+                alert(error.message);
+            });
 
     }
 
