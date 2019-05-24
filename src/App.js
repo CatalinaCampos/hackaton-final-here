@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 // import Profile from '../src/components/Profile/Profile';
-
-import Loading from './components/Loading/Loading';
+// import Loading from './components/Loading/Loading';
 import Map from './components/Map';
 import PrincipalFooter from './components/PrincipalFooter/PrincipalFooter'
 import TelephoneNav from './components/TelephoneNav/TelephoneNav'
 import Notifications from './components/Notifications/Notifications'
 import Home from './components/Home/Home'
 import EventInfo from './components/EventInfo/EventInfo'
+import Modal from './components/Modal/Modal'
 
 
 class App extends Component {
@@ -167,6 +167,9 @@ class App extends Component {
                 <PrincipalFooter onSetNotifications={this.changeNotifications}
                     onSethideViewMap={this.changehideViewMap} onChangeViewHome={this.changeViewHome} />
                 {this.state.viewInfoEvent && <EventInfo onChangeViewHome={this.changeViewHome} />}
+                
+                
+
             </div>
         )
     }

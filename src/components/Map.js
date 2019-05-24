@@ -2,6 +2,7 @@ import React from 'react';
 import { faGrimace } from '@fortawesome/free-solid-svg-icons';
 import { faAdobe } from '@fortawesome/free-brands-svg-icons';
 // import { Marker } from 'react-leaflet';
+import Modal from 'react-responsive-modal';
 
 export default class Map extends React.Component {
     constructor(props) {
@@ -11,6 +12,7 @@ export default class Map extends React.Component {
         this.map = null;
 
         this.state = {
+            
             app_id: props.app_id,
             app_code: props.app_code,
             useHTTPS: true,
@@ -22,6 +24,15 @@ export default class Map extends React.Component {
         }
 
     }
+
+    onOpenModal = () => {
+        this.setState({ open: true });
+    };
+    
+    onCloseModal = () => {
+        this.setState({ open: false });
+    };
+    
 
     componentDidMount() {
         this.platform = new window.H.service.Platform(this.state);
@@ -40,14 +51,13 @@ export default class Map extends React.Component {
         // eslint-disable-next-line
         var ui = new window.H.ui.UI.createDefault(this.map, layer)
 
-
-
         // Create a marker for the point:
-
+        
         this.startMarker1 = new window.H.map.Marker({
             lat: -33.4171066,
             lng: -70.6395131,
         });
+
 
         this.startMarker2 = new window.H.map.Marker({
             lat: -33.4177695,
@@ -77,6 +87,38 @@ export default class Map extends React.Component {
 
 
         this.map.addObjects([this.startMarker1, this.startMarker2, this.startMarker3, this.startMarker4, this.startMarker5, this.endMarker1 ])
+
+        this.startMarker1.addEventListener('tap', function (evt) {
+        //     var bubble = new window.H.ui.open(evt.startMarker1.getPosition(this), {
+        //         content: evt.startMarker1.getData()
+        //     })
+        //     window.H.ui.addBubble(bubble);
+        // },false);
+            
+            function showAlert(evt){
+                return alert("Museo-Patrimonio Culural, Ubicado en: Av Recoleta 683")
+            }  
+            showAlert()          
+        }, false);
+        
+
+        this.startMarker2.addEventListener('tap', function (evt) {
+            alert("Cementerio General, Ubicado en: Profesor Alberto Zañartu 951, Recoleta")
+        }, false);
+
+        this.startMarker3.addEventListener('tap', function (evt) {
+            alert("Museo La Chascona, Ubicado en: Fernando Márquez de la Plata 0192")
+        }, false);
+
+        this.startMarker4.addEventListener('tap', function (evt) {
+            alert("Cementerio General, Ubicado en: Av. Valdivieso 596, Recoleta ")
+        }, false);
+
+        this.startMarker5.addEventListener('tap', function (evt) {
+            alert("Recoleta Franciscana, Ubicado en: Av Recoleta 220")
+        }, false);
+
+
     }
 
     componentDidUpdate() {
@@ -123,6 +165,21 @@ export default class Map extends React.Component {
             lat: startPoint.latitude,
             lng: startPoint.longitude,
         });
+
+        this.startMarker.addEventListener('tap', function (evt) {
+            // event target is the marker itself, group is a parent event target
+            // for all objects that it contains
+            var bubble =  new window.H.ui.InfoBubble(evt.target.getPosition(this.addObjects), {
+                
+                // read custom data
+                content: evt.target.getData()
+            });
+            // show info bubble
+            window.H.ui.addBubble(bubble);
+        }, false);
+        
+        
+
         this.endMarker = new window.H.map.Marker({
             lat: endPoint.latitude,
             lng: endPoint.longitude,
@@ -139,9 +196,13 @@ export default class Map extends React.Component {
             this.map.addObjects([this.routeLine, this.startMarker, this.endMarker]);
             // Set the map's viewport to make the whole route visible:
             this.map.setViewBounds(this.routeLine.getBounds());
+
+            this.startMarker.addEventListener('tap', function (evt) {
+                alert("message"+evt)
+            }, false);
         }
     };
-}
+
 
         // Get an instance of the routing service:
         this.router = this.platform.getRoutingService();
@@ -157,7 +218,10 @@ export default class Map extends React.Component {
     }
 
     render() {
-        return ( <div ref = "here-map"
+        
+        return ( 
+            <div>
+        <div ref = "here-map"
             style = {
                 {
                     width: '100%',
@@ -167,6 +231,7 @@ export default class Map extends React.Component {
                 }
             } >
             </div>
+        </div>
         );
     }
 }

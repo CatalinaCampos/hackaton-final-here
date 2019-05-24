@@ -22,7 +22,7 @@ class ModalM extends Component {
             <button onClick={this.onOpenModal}>Pin</button>
             <Modal open={open} onClose={this.onCloseModal} center>
             <h2> Museo</h2>
-            <p>Dirección:<br/>Av. Recoleta 683, Estación de Metro Cerro Blanco, Línea 2.</p>
+            <p>Dirección:Av. Recoleta 683, Estación de Metro Cerro Blanco, Línea 2.</p>
             <button href="">Más información</button>
             </Modal>
         </div>
