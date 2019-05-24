@@ -107,7 +107,7 @@ export default class Map extends React.Component {
         }, false);
 
         this.startMarker3.addEventListener('tap', function (evt) {
-            alert("Museo La Chascona, Ubicado en: Fernando Márquez de la Plata 0192")
+            alert("Museo La Chascona, Ubicado en: Fernando Márquez de la Plata 192")
         }, false);
 
         this.startMarker4.addEventListener('tap', function (evt) {
