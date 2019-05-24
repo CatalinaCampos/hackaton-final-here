@@ -1,58 +1,56 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import '../Profile/Profile.css';
 import TelephoneNav from '../TelephoneNav/TelephoneNav';
 import bookmark from '../../images/bookmark.png';
 import settings from '../../images/settings.png';
 import create from '../../images/create.png';
 import profilePicture from '../../images/profilePicture.jpg';
+
 import PrincipalFooter from '../PrincipalFooter/PrincipalFooter';
 
 class Profile extends Component {
-    render() { 
-        return ( 
+    render() {
+        return (
             <div>
-                <TelephoneNav/>
-                <div className="container">
-                    <h4 className="perfil">PERFIL</h4>
-                    <img className="profilePicture" src={profilePicture} alt="profilePicture"/>
-                    <h4 className="profileName">Juana Carreño</h4>
-                    <div className="activityContainer">
-                
-                    <div className="row">
-                    <button className="activity">Museo</button>
-                    <button className="activity">Patrimonio Cultural</button>
-                    </div>
-                    
-                    <div className="row">
-                        <button className="activity">Gastronomía</button>
-                        <button className="activity">Artes Visuales</button>
-                        <button className="activity">Música</button>
+                <TelephoneNav />
+                <nav className="profileNav">
+                    <h3 className="perfil">PERFIL</h3>
+                </nav>
+                <div className="profile">
+                    <img src={profilePicture} alt="Notificacion" className="profilePicture" />
+                    <p className="pName">Juana Carreño</p>
+
+                    <div className="preferences1">
+                        <div className="memory" >Memoria y DD.HH</div>
+                        <div className="museum">Museo</div>
                     </div>
 
-                    <div className="row">
-                        <button className="activity">Literatura</button>
-                        <button className="activity">Teatro</button>
+                    <div className="preferences2">
+                        <div className="cultural">Patrimonio cultural</div>
+                        <div className="cine">Cine</div>
                     </div>
 
+                    <div className="preferences3">
+                        <div className="literature">Literatura</div>
                     </div>
-                <div className="row"> 
-                <img src={bookmark} alt="bookmark" className="profileIcon"/>
-                <h4 className="eventName">Eventos Guardados</h4>
                 </div>
 
-                <div className="row">
-                <img src={create} alt="settings" id="profileIconC" className="profileIconC"/>
-                <h4 className="eventNameC" id="eventNameC">Editar preferencias</h4>
+                <div className="settings">
+                <img src={bookmark} alt="Notificacion" className="marks" />
+                <img src={create} alt="Notificacion" className="marks" />
+                <img src={settings} alt="Notificacion" className="marks" />
+                </div>
+                <div className="pSettings">
+                <p>Eventos guardados</p>
+                <p>Editar preferencias</p>
+                <p>Configurar notificaciones</p>
                 </div>
 
-                <div className="row">
-                <img src={settings} alt="settings" id="profileIconS" className="profileIconS"/>
-                <h4 className="eventNames" id="eventNames">Config. notificaciones</h4>
-                </div>
-                </div>
-                <PrincipalFooter/>
-                
-                </div>
+                <PrincipalFooter />
+            </div>
+
+
+
         );
     }
 }

@@ -6,15 +6,12 @@ import image2 from '../../images/2.png'
 import image3 from '../../images/3.png'
 import image4 from '../../images/4.png'
 import image5 from '../../images/5.png'
-import TelephoneNav from '../TelephoneNav/TelephoneNav.js'
-import PrincipalFooter from '../PrincipalFooter/PrincipalFooter'
 
 class Home extends Component {
 
     render() {
         return (
             <div className="App">
-                <TelephoneNav />
                 <div className="divEvents">
                     <nav className="events">
                         <h3 className="h3Events">PRÓXIMOS EVENTOS</h3>
@@ -59,7 +56,6 @@ class Home extends Component {
                 <br/>
                 <br/>
                 <br/>
-                <PrincipalFooter />
 
             </div>
         )

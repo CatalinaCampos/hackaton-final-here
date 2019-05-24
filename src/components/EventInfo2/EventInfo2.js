@@ -9,15 +9,11 @@ import precio from '../../images/precio.png'
 import calendario from '../../images/calendario.png'
 import flecha from '../../images/flecha.png'
 
-import TelephoneNav from '../TelephoneNav/TelephoneNav'
-import PrincipalFooter from '../PrincipalFooter/PrincipalFooter'
-
 class EventInfo2 extends Component {
 
     render() {
         return (
             <div>
-                < TelephoneNav />
                 <div className="eventInfo">
                     <nav className="details">
 
@@ -61,8 +57,6 @@ class EventInfo2 extends Component {
                         </p>
                     </div>
                 </div>
-
-                < PrincipalFooter />
             </div>
         )
     }

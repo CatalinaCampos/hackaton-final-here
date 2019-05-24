@@ -6,7 +6,7 @@ import './App.css';
 import Map from './components/Map';
 import PrincipalFooter from './components/PrincipalFooter/PrincipalFooter'
 import TelephoneNav from './components/TelephoneNav/TelephoneNav'
-import Notification from './components/Notification'
+import Notifications from './components/Notifications/Notifications'
 import Home from './components/Home/Home'
 import EventInfo from './components/EventInfo/EventInfo'
 import EventInfo2 from './components/EventInfo2/EventInfo2'
@@ -221,8 +221,10 @@ class App extends Component {
                     startPoint={this.state.startPoint}
                     endPoint={this.state.endPoint}
                 />}
+
                 {this.state.updateNotifications && <Notification />}
                 {this.state.viewHome && <Home onChangeViewEvent={this.changeViewEvent}  onChangeViewEvent1={this.changeViewEvent1} onChangeViewEvent2={this.changeViewEvent2}/>}
+
                 <PrincipalFooter onSetNotifications={this.changeNotifications}
                     onSethideViewMap={this.changehideViewMap }/>
                 {this.state.viewInfoEvent && <EventInfo onChangeBackArrow={this.backArrow} onChangeViewHome={this.changeViewHome} />}
