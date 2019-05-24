@@ -68,9 +68,11 @@ export default class Map extends React.Component {
 
             this.startMarker1.setData(
                 `<img src=${bubble1} alt="Notificacion" class="detailBubble1" />  
-                <p>Museo de guardar</p> 
-                <p> Av. Recoleta 683</p>
-                <button>¿Cómo llegar?</button>`);
+                <p class="pBubble1">Museo de guardar</p> 
+                <p class="pBubble"> Av. Recoleta 683</p>
+                <form action="https://wego.here.com/directions/mix/Calle-Schlack-528,-8420000-Recoleta,-Regi%C3%B3n-Metropolitana-de-Santiago,-Rep%C3%BAblica-de-Chile:-33.41881,-70.64231/Avenida-Libertador-Bernardo-OHiggins-3349,-9160000-Estaci%C3%B3n-Central,-Estaci%C3%B3n-Central,-Regi%C3%B3n-Metropolitana-de-Santiago,-Chile:loc-dmVyc2lvbj0xO3RpdGxlPUF2ZW5pZGErTGliZXJ0YWRvcitCZXJuYXJkbytPJTI3SGlnZ2lucyszMzQ5O2xhbmc9ZXM7bGF0PS0zMy40NTA2ODc0MDg0NDcyNjY7bG9uPS03MC42NzkzNjcwNjU0Mjk2OTtzdHJlZXQ9QXZlbmlkYStMaWJlcnRhZG9yK0Jlcm5hcmRvK08lMjdIaWdnaW5zO2hvdXNlPTMzNDk7Y2l0eT1Fc3RhY2klQzMlQjNuK0NlbnRyYWw7cG9zdGFsQ29kZT05MTYwMDAwO2NvdW50cnk9Q0hMO2Rpc3RyaWN0PUVzdGFjaSVDMyVCM24rQ2VudHJhbDtzdGF0ZT1SZWdpJUMzJUIzbitNZXRyb3BvbGl0YW5hK2RlK1NhbnRpYWdvO3N0YXRlQ29kZT1STTtjb3VudHk9U2FudGlhZ287Y2F0ZWdvcnlJZD1idWlsZGluZztzb3VyY2VTeXN0ZW09aW50ZXJuYWw7bmxhdD0tMzMuNDUwNzkwNDA1MjczNDQ7bmxvbj0tNzAuNjc5MzQ0MTc3MjQ2MTtwZHNDYXRlZ29yeUlkPTkwMC05MzAwLTAwMDA?map=-33.43428,-70.66094,14,normal">
+                                <input type="submit" value="¿Cómo llegar?" class="goTo" />
+                            </form>`);
             this.startMarker1.addEventListener('tap', event => {
                 const bubble = new window.H.ui.InfoBubble(
                     event.target.getPosition(),
@@ -90,9 +92,11 @@ export default class Map extends React.Component {
 
             this.startMarker2.setData(`
             <img src=${bubble2} alt="Notificacion" class="detailBubble1" />  
-            <p>Heroínas de nuestra historia</p> 
-            <p>Profesor Alberto Zañartu 951</p>
-            <button>¿Cómo llegar?</button>`);
+            <p class="pBubble1">Heroínas de nuestra historia</p> 
+            <p class="pBubble">Profesor Alberto Zañartu 951</p>
+            <form action="https://wego.here.com/directions/mix/Calle-Florencio-Bahamondes-2104,-8320000-Santiago,-Regi%C3%B3n-Metropolitana-de-Santiago,-Rep%C3%BAblica-de-Chile:-33.47415,-70.66780/Calle-Profesor-Alberto-Za%C3%B1artu-951,-8420000-Cementerios,-Recoleta,-Regi%C3%B3n-Metropolitana-de-Santiago,-Chile:loc-dmVyc2lvbj0xO3RpdGxlPUNhbGxlK1Byb2Zlc29yK0FsYmVydG8rWmElQzMlQjFhcnR1Kzk1MTtsYW5nPWVzO2xhdD0tMzMuNDE3NDY5MDI0NjU4Mjtsb249LTcwLjY1MTU4ODQzOTk0MTQ7c3RyZWV0PUNhbGxlK1Byb2Zlc29yK0FsYmVydG8rWmElQzMlQjFhcnR1O2hvdXNlPTk1MTtjaXR5PVJlY29sZXRhO3Bvc3RhbENvZGU9ODQyMDAwMDtjb3VudHJ5PUNITDtkaXN0cmljdD1DZW1lbnRlcmlvcztzdGF0ZT1SZWdpJUMzJUIzbitNZXRyb3BvbGl0YW5hK2RlK1NhbnRpYWdvO3N0YXRlQ29kZT1STTtjb3VudHk9U2FudGlhZ287Y2F0ZWdvcnlJZD1idWlsZGluZztzb3VyY2VTeXN0ZW09aW50ZXJuYWw7bmxhdD0tMzMuNDE3NTcyMDIxNDg0Mzc1O25sb249LTcwLjY1MTYwMzY5ODczMDQ3O3Bkc0NhdGVnb3J5SWQ9OTAwLTkzMDAtMDAwMA?map=-33.4186,-70.64688,15,normal">
+                                <input type="submit" value="¿Cómo llegar?" class="goTo" />
+                            </form>`);
             this.startMarker2.addEventListener('tap', event => {
                 const bubble = new window.H.ui.InfoBubble(
                     event.target.getPosition(),
@@ -112,9 +116,11 @@ export default class Map extends React.Component {
 
             this.startMarker3.setData(`
             <img src=${bubble3} alt="Notificacion" class="detailBubble1" />  
-            <p>Casa museo la Chascona</p> 
-            <p>Fernando Márquez de la Plata 0192</p>
-            <button>¿Cómo llegar?</button>`);
+            <p class="pBubble1">Casa museo la Chascona</p> 
+            <p class="pBubble">Fernando Márquez de la Plata 0192</p>
+            <form action="https://wego.here.com/directions/mix/Calle-Florencio-Bahamondes-2104,-8320000-Santiago,-Regi%C3%B3n-Metropolitana-de-Santiago,-Rep%C3%BAblica-de-Chile:-33.47415,-70.66780/Pasaje-Fernando-M%C3%A1rquez-de-la-Plata-0192,-7500000-Providencia,-Providencia,-Regi%C3%B3n-Metropolitana-de-Santiago,-Chile:loc-dmVyc2lvbj0xO3RpdGxlPVBhc2FqZStGZXJuYW5kbytNJUMzJUExcnF1ZXorZGUrbGErUGxhdGErMDE5MjtsYW5nPWVzO2xhdD0tMzMuNDMxMTk4MTIwMTE3MTk7bG9uPS03MC42MzQ1MzY3NDMxNjQwNjtzdHJlZXQ9UGFzYWplK0Zlcm5hbmRvK00lQzMlQTFycXVleitkZStsYStQbGF0YTtob3VzZT0wMTkyO2NpdHk9UHJvdmlkZW5jaWE7cG9zdGFsQ29kZT03NTAwMDAwO2NvdW50cnk9Q0hMO2Rpc3RyaWN0PVByb3ZpZGVuY2lhO3N0YXRlPVJlZ2klQzMlQjNuK01ldHJvcG9saXRhbmErZGUrU2FudGlhZ287c3RhdGVDb2RlPVJNO2NvdW50eT1TYW50aWFnbztjYXRlZ29yeUlkPWJ1aWxkaW5nO3NvdXJjZVN5c3RlbT1pbnRlcm5hbDtubGF0PS0zMy40MzEyMjEwMDgzMDA3ODtubG9uPS03MC42MzQ1NTIwMDE5NTMxMjtwZHNDYXRlZ29yeUlkPTkwMC05MzAwLTAwMDA?map=-33.45269,-70.65109,13,normal">
+                                <input type="submit" value="¿Cómo llegar?" class="goTo" />
+                            </form>`);
             this.startMarker3.addEventListener('tap', event => {
                 const bubble = new window.H.ui.InfoBubble(
                     event.target.getPosition(),
@@ -134,9 +140,11 @@ export default class Map extends React.Component {
 
             this.startMarker4.setData(`
             <img src=${bubble4} alt="Notificacion" class="detailBubble1" />  
-            <p>Historia, memoria y derechos humanos</p> 
-            <p>Av. Valdivieso 596</p>
-            <button>¿Cómo llegar?</button>`);
+            <p class="pBubble1">Historia, memoria y derechos humanos</p> 
+            <p class="pBubble">Av. Valdivieso 596</p>
+            <form action="https://wego.here.com/directions/mix/Calle-Florencio-Bahamondes-2104,-8320000-Santiago,-Regi%C3%B3n-Metropolitana-de-Santiago,-Rep%C3%BAblica-de-Chile:-33.47415,-70.66780/Calle-Profesor-Alberto-Za%C3%B1artu-951,-8420000-Cementerios,-Recoleta,-Regi%C3%B3n-Metropolitana-de-Santiago,-Chile:loc-dmVyc2lvbj0xO3RpdGxlPUNhbGxlK1Byb2Zlc29yK0FsYmVydG8rWmElQzMlQjFhcnR1Kzk1MTtsYW5nPWVzO2xhdD0tMzMuNDE3NDY5MDI0NjU4Mjtsb249LTcwLjY1MTU4ODQzOTk0MTQ7c3RyZWV0PUNhbGxlK1Byb2Zlc29yK0FsYmVydG8rWmElQzMlQjFhcnR1O2hvdXNlPTk1MTtjaXR5PVJlY29sZXRhO3Bvc3RhbENvZGU9ODQyMDAwMDtjb3VudHJ5PUNITDtkaXN0cmljdD1DZW1lbnRlcmlvcztzdGF0ZT1SZWdpJUMzJUIzbitNZXRyb3BvbGl0YW5hK2RlK1NhbnRpYWdvO3N0YXRlQ29kZT1STTtjb3VudHk9U2FudGlhZ287Y2F0ZWdvcnlJZD1idWlsZGluZztzb3VyY2VTeXN0ZW09aW50ZXJuYWw7bmxhdD0tMzMuNDE3NTcyMDIxNDg0Mzc1O25sb249LTcwLjY1MTYwMzY5ODczMDQ3O3Bkc0NhdGVnb3J5SWQ9OTAwLTkzMDAtMDAwMA?map=-33.42418,-70.64302,15,normal">
+                                <input type="submit" value="¿Cómo llegar?" class="goTo" />
+                            </form>`);
             this.startMarker4.addEventListener('tap', event => {
                 const bubble = new window.H.ui.InfoBubble(
                     event.target.getPosition(),
@@ -156,9 +164,11 @@ export default class Map extends React.Component {
 
             this.startMarker5.setData(`
             <img src=${bubble5} alt="Notificacion" class="detailBubble1" />  
-            <p>Recorrido patrimonial Recoleta Franciscana</p> 
-            <p>Av. Recoleta 220</p>
-            <button>¿Cómo llegar?</button>`);
+            <p class="pBubble1">Recorrido patrimonial Recoleta Franciscana</p> 
+            <p class="pBubble">Av. Recoleta 220</p>
+            <form action="https://wego.here.com/directions/mix/Calle-Florencio-Bahamondes-2104,-8320000-Santiago,-Regi%C3%B3n-Metropolitana-de-Santiago,-Rep%C3%BAblica-de-Chile:-33.47415,-70.66780/Avenida-Recoleta-220,-8420000-Vega-Central,-Recoleta,-Regi%C3%B3n-Metropolitana-de-Santiago,-Chile:loc-dmVyc2lvbj0xO3RpdGxlPUF2ZW5pZGErUmVjb2xldGErMjIwO2xhbmc9ZXM7bGF0PS0zMy40MzA2NzU1MDY1OTE4O2xvbj0tNzAuNjQ3NTIxOTcyNjU2MjU7c3RyZWV0PUF2ZW5pZGErUmVjb2xldGE7aG91c2U9MjIwO2NpdHk9UmVjb2xldGE7cG9zdGFsQ29kZT04NDIwMDAwO2NvdW50cnk9Q0hMO2Rpc3RyaWN0PVZlZ2ErQ2VudHJhbDtzdGF0ZT1SZWdpJUMzJUIzbitNZXRyb3BvbGl0YW5hK2RlK1NhbnRpYWdvO3N0YXRlQ29kZT1STTtjb3VudHk9U2FudGlhZ287Y2F0ZWdvcnlJZD1idWlsZGluZztzb3VyY2VTeXN0ZW09aW50ZXJuYWw7bmxhdD0tMzMuNDMwNzUxODAwNTM3MTE7bmxvbj0tNzAuNjQ3NDYwOTM3NTtwZHNDYXRlZ29yeUlkPTkwMC05MzAwLTAwMDA?map=-33.45244,-70.65767,13,normal">
+                                <input type="submit" value="¿Cómo llegar?" class="goTo" />
+                            </form>`);
             this.startMarker5.addEventListener('tap', event => {
                 const bubble = new window.H.ui.InfoBubble(
                     event.target.getPosition(),
