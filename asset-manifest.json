@@ -1,30 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.e9582f19.chunk.css",
-    "main.js": "/static/js/main.8844ba85.chunk.js",
-    "main.js.map": "/static/js/main.8844ba85.chunk.js.map",
+    "main.css": "/static/css/main.5d987221.chunk.css",
+    "main.js": "/static/js/main.c8ca4fbd.chunk.js",
+    "main.js.map": "/static/js/main.c8ca4fbd.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
     "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.35eb61e5.chunk.js": "/static/js/2.35eb61e5.chunk.js",
-    "static/js/2.35eb61e5.chunk.js.map": "/static/js/2.35eb61e5.chunk.js.map",
+    "static/js/2.d1fed508.chunk.js": "/static/js/2.d1fed508.chunk.js",
+    "static/js/2.d1fed508.chunk.js.map": "/static/js/2.d1fed508.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.92976f990d87e64ece12914781ac2175.js": "/precache-manifest.92976f990d87e64ece12914781ac2175.js",
+    "precache-manifest.3f6cf17809db48576425d50b3c4959c2.js": "/precache-manifest.3f6cf17809db48576425d50b3c4959c2.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.e9582f19.chunk.css.map": "/static/css/main.e9582f19.chunk.css.map",
+    "static/css/main.5d987221.chunk.css.map": "/static/css/main.5d987221.chunk.css.map",
     "static/media/1.png": "/static/media/1.8645a1de.png",
     "static/media/2.png": "/static/media/2.b703579d.png",
     "static/media/3.png": "/static/media/3.997b428e.png",
     "static/media/4.png": "/static/media/4.71c8730a.png",
     "static/media/5.png": "/static/media/5.c1627cf8.png",
-    "static/media/Group 3.png": "/static/media/Group 3.723889c8.png",
     "static/media/details1.png": "/static/media/details1.9652150a.png",
     "static/media/details3.png": "/static/media/details3.e3f1ec7f.png",
     "static/media/eventdetails.png": "/static/media/eventdetails.528fc36f.png",
     "static/media/eventocultural.png": "/static/media/eventocultural.d8a7d4ee.png",
     "static/media/notification1.png": "/static/media/notification1.77877590.png",
     "static/media/notification2.png": "/static/media/notification2.08d3a1f7.png",
-    "static/media/notification3.png": "/static/media/notification3.c2eb6f55.png",
-    "static/media/principalpage.png": "/static/media/principalpage.04679bf4.png",
-    "static/media/profilePicture.jpg": "/static/media/profilePicture.f2e6da67.jpg"
+    "static/media/notification3.png": "/static/media/notification3.c2eb6f55.png"
   }
 }
