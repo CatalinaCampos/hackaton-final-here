@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import './App.css';
 // import Profile from '../src/components/Profile/Profile';
 
-import Loading from './components/Loading/Loading';
+// import Loading from './components/Loading/Loading';
 import Map from './components/Map';
 import PrincipalFooter from './components/PrincipalFooter/PrincipalFooter'
 import TelephoneNav from './components/TelephoneNav/TelephoneNav'
 import Notifications from './components/Notifications/Notifications'
 import Home from './components/Home/Home'
 import EventInfo from './components/EventInfo/EventInfo'
+import EventInfo2 from './components/EventInfo2/EventInfo2'
+import EventInfo3 from './components/EventInfo3/EventInfo3'
 
 
 class App extends Component {
@@ -30,14 +32,23 @@ class App extends Component {
             updateNotifications: false,
             hideViewMap: false,
             viewHome: true,
-            viewInfoEvent: false
+            viewInfoEvent: false,
+            viewInfoEvent1: false,
+            viewInfoEvent2: false,
         }
 
         this.functionCoordUser = this.functionCoordUser.bind(this);
         this.changeNotifications = this.changeNotifications.bind(this);
         this.changehideViewMap = this.changehideViewMap.bind(this);
         this.changeViewHome = this.changeViewHome.bind(this);
-        this.changeViewEvent = this.changeViewEvent.bind(this)
+        this.changeViewHome1 = this.changeViewHome1.bind(this);
+        this.changeViewHome2 = this.changeViewHome2.bind(this);
+        this.changeViewEvent = this.changeViewEvent.bind(this);
+        this.changeViewEvent1 = this.changeViewEvent1.bind(this);
+        this.changeViewEvent2 = this.changeViewEvent2.bind(this);
+        this.backArrow= this.backArrow.bind(this)
+
+    //     this.changeViewEvent2 = this.changeViewEvent2.bind(this);
     }
 
     componentDidMount() {
@@ -99,12 +110,6 @@ class App extends Component {
         })
     }
 
-// otrafunction(){
-//     this.setState({
-//         ...this.state,
-//         endPoint: 
-//     })
-// }
 
     changeNotifications(){
         this.setState({
@@ -131,7 +136,27 @@ class App extends Component {
             ...this.state,
             viewInfoEvent: true,
             viewHome: false,
-            hideViewMap: false,
+            // hideViewMap: false,
+            updateNotifications: false,
+        })
+    }
+
+    changeViewEvent1() {
+        this.setState({
+            ...this.state,
+            viewInfoEvent1: true,
+            viewHome: false,
+            // hideViewMap: false,
+            updateNotifications: false,
+        })
+    }
+
+    changeViewEvent2() {
+        this.setState({
+            ...this.state,
+            viewInfoEvent2: true,
+            viewHome: false,
+            // hideViewMap: false,
             updateNotifications: false,
         })
     }
@@ -139,11 +164,47 @@ class App extends Component {
     changeViewHome() {
         this.setState({
             ...this.state,
+            viewHome: false,
+            viewInfoEvent: false,
+            viewInfoEvent1: false,
+            viewInfoEvent2: false,
+            // hideViewMap: false,
+            updateNotifications: false,
+        })
+    }
+
+    changeViewHome1() {
+        this.setState({
+            ...this.state,
+            viewHome: false,
+            viewInfoEvent: false,
+            viewInfoEvent1: true,
+            viewInfoEvent2: false,
+            // hideViewMap: false,
+            updateNotifications: false,
+        })
+    }
+
+    changeViewHome2() {
+        this.setState({
+            ...this.state,
+            viewHome: false,
+            viewInfoEvent: false,
+            viewInfoEvent1: false,
+            viewInfoEvent2: true,
+            // hideViewMap: false,
+            updateNotifications: false,
+        })
+    }
+
+    backArrow(){
+        this.setState({
+            ...this.state,
             viewHome: true,
             viewInfoEvent: false,
-            hideViewMap: false,
+            viewInfoEvent1: false,
+            viewInfoEvent2: false,
             updateNotifications: false,
-
         })
     }
 
@@ -151,7 +212,6 @@ class App extends Component {
         return (
             <div className="App">
                 <TelephoneNav />
-
                 {this.state.hideViewMap && <Map
                     app_id={this.state.app_id}
                     app_code={this.state.app_code}
@@ -161,12 +221,15 @@ class App extends Component {
                     startPoint={this.state.startPoint}
                     endPoint={this.state.endPoint}
                 />}
-                {this.state.updateNotifications && <Notifications />}
-                {this.state.viewHome && <Home onChangeViewEvent={this.changeViewEvent} />}
+
+                {this.state.updateNotifications && <Notification />}
+                {this.state.viewHome && <Home onChangeViewEvent={this.changeViewEvent}  onChangeViewEvent1={this.changeViewEvent1} onChangeViewEvent2={this.changeViewEvent2}/>}
 
                 <PrincipalFooter onSetNotifications={this.changeNotifications}
-                    onSethideViewMap={this.changehideViewMap} onChangeViewHome={this.changeViewHome} />
-                {this.state.viewInfoEvent && <EventInfo onChangeViewHome={this.changeViewHome} />}
+                    onSethideViewMap={this.changehideViewMap }/>
+                {this.state.viewInfoEvent && <EventInfo onChangeBackArrow={this.backArrow} onChangeViewHome={this.changeViewHome} />}
+                {this.state.viewInfoEvent1 && <EventInfo2 onChangeBackArrow={this.backArrow} onChangeViewHome1={this.changeViewHome1} />}
+                {this.state.viewInfoEvent2 && <EventInfo3 onChangeBackArrow={this.backArrow} onChangeViewHome2={this.changeViewHome2} />}
             </div>
         )
     }

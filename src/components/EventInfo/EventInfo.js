@@ -21,7 +21,7 @@ class EventInfo extends Component {
                 <div className="eventInfo">
                     <nav className="details">
 
-                        <img src={flecha} alt="arrow" className="arrow" onClick={this.props.onChangeViewHome} />
+                        <img src={flecha} alt="arrow" className="arrow" onClick={this.props.onChangeBackArrow} />
                         <h3 className="h3Activity">DETALLES DE LA ACTIVIDAD</h3>
                     </nav>
                     <div className="detailsEvent">

@@ -20,6 +20,7 @@ export default class Map extends React.Component {
                 lng: props.lng,
             },
             zoom: props.zoom,
+            
         }
     }
 
@@ -93,8 +94,11 @@ export default class Map extends React.Component {
         });*/
 
 
+
         this.map.addObjects([this.startMarker, this.startMarker1, this.startMarker2, this.startMarker3, this.startMarker4, this.startMarker5 /*this.endMarker1*/])
+
     }
+
 
     componentDidUpdate() {
 
@@ -162,13 +166,13 @@ export default class Map extends React.Component {
         // Get an instance of the routing service:
         this.router = this.platform.getRoutingService();
 
-        // Call calculateRoute() with the routing parameters,
-        // the callback and an error callback function (called if a
-        // communication error occurs):
-        this.router.calculateRoute(this.routingParameters, this.onResult,
-            function (error) {
-                alert(error.message);
-            });
+    // Call calculateRoute() with the routing parameters,
+    // the callback and an error callback function (called if a
+    // communication error occurs):
+    this.router.calculateRoute(this.routingParameters, this.onResult,
+        function (error) {
+            alert(error.message);
+        });
 
     }
 

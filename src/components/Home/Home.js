@@ -22,7 +22,7 @@ class Home extends Component {
                         <p className="cinemaP">Cine fulldome en planetario de Santiago</p>
                     </div>
 
-                <div className="photoEvents" >
+                <div className="photoEvents" onClick={this.props.onChangeViewEvent1}>
                     <img src={image1} alt="evento" className="cultural-event" />
                     <div className="museo">Museo</div>
                     <p className="cinemaP">Museo de guardar. Colección Museo de Artes Decorativas</p>
@@ -34,7 +34,7 @@ class Home extends Component {
                     <p className="cinemaP">Día del patrimonio cultural "Heroínas de nuestra historia”en el cementerio general</p>
                 </div>
 
-                <div className="photoEvents" >
+                <div className="photoEvents" onClick={this.props.onChangeViewEvent2}>
                     <img src={image3} alt="evento" className="cultural-event" />
                     <div className="museo">Museo</div>
                     <p className="cinemaP">Casa museo la Chascona</p>
