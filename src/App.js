@@ -80,7 +80,7 @@ class App extends Component {
     }
 
     async functionCoordUser(start, end) {
-        this.startPoint = await fetch("https://geocoder.api.here.com/6.2/geocode.json?app_id=" + this.state.app_id + "&app_code=" + this.state.app_code + "&searchtext=" + start)
+        this.startPoint = await fetch("https://cors-anywhere.herokuapp.com/https://geocoder.api.here.com/6.2/geocode.json?app_id=" + this.state.app_id + "&app_code=" + this.state.app_code + "&searchtext=" + start)
             .then(data => data.json())
             .then(data => {
                 return {
@@ -89,7 +89,7 @@ class App extends Component {
                     address: data.Response.View[0].Result[0].Location.Address.Label,
                 }
             })
-        this.endPoint = await fetch("https://geocoder.api.here.com/6.2/geocode.json?app_id=" + this.state.app_id + "&app_code=" + this.state.app_code + "&searchtext=" + end)
+        this.endPoint = await fetch("https://cors-anywhere.herokuapp.com/https://geocoder.api.here.com/6.2/geocode.json?app_id=" + this.state.app_id + "&app_code=" + this.state.app_code + "&searchtext=" + end)
             .then(data => data.json())
             .then(data => {
                 return {
@@ -222,7 +222,7 @@ class App extends Component {
                     endPoint={this.state.endPoint}
                 />}
 
-                {this.state.updateNotifications && <Notification />}
+                {this.state.updateNotifications && <Notifications />}
                 {this.state.viewHome && <Home onChangeViewEvent={this.changeViewEvent}  onChangeViewEvent1={this.changeViewEvent1} onChangeViewEvent2={this.changeViewEvent2}/>}
 
                 <PrincipalFooter onSetNotifications={this.changeNotifications}
