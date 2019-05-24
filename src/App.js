@@ -14,7 +14,6 @@ import EventInfo3 from './components/EventInfo3/EventInfo3'
 import Profile from './components/Profile/Profile';
 import Loading from './components/Loading/Loading';
 
-
 class App extends Component {
     constructor(props) {
         super(props);
@@ -254,6 +253,11 @@ class App extends Component {
                     endPoint={this.state.endPoint}
                 />}
 
+                <PrincipalFooter onSetNotifications={this.changeNotifications}
+                    onSethideViewMap={this.changehideViewMap} onChangeViewHome={this.changeViewHome} />
+                {this.state.viewInfoEvent && <EventInfo onChangeViewHome={this.changeViewHome} />}
+                
+                
                 {this.state.updateNotifications && <Notifications />}
                 {this.state.viewHome && <Home onChangeViewEvent={this.changeViewEvent}  onChangeViewEvent1={this.changeViewEvent1} onChangeViewEvent2={this.changeViewEvent2}/>}
                 {this.state.profileUser && <Profile />}
@@ -262,6 +266,7 @@ class App extends Component {
                 {this.state.viewInfoEvent && <EventInfo onChangeBackArrow={this.backArrow} onChangeViewHome={this.changeViewHome} />}
                 {this.state.viewInfoEvent1 && <EventInfo2 onChangeBackArrow={this.backArrow} onChangeViewHome1={this.changeViewHome1} />}
                 {this.state.viewInfoEvent2 && <EventInfo3 onChangeBackArrow={this.backArrow} onChangeViewHome2={this.changeViewHome2} />}
+
             </div>
         )
     }

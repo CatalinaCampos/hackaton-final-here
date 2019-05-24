@@ -3,10 +3,9 @@
     background-color: #ffffff;
     border-radius: 5px;
     border-color: #FF2E63;
-    margin-top: 25px; 
-    display: block;
-    margin-left: auto;
-    margin-right: auto; 
+    margin-top: 15px; 
+    margin-left: 2%;
+    margin-right: 2%; 
 }
 
 .activitycontainer{
@@ -54,4 +53,9 @@
     height: 85%;
     margin-top: 30px;
     border: 5px;
+}
+
+#selectedColor{
+    background-color: #FF2E63;
+    color: #ffffff;
 }

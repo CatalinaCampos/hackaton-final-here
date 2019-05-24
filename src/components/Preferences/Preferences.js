@@ -9,31 +9,30 @@ class Preferences extends Component {
         return (
             <div>
                 <TelephoneNav/>
-                <h4 className="preferences">Completa tus preferencias</h4>
+                <h4 className="preferences">COMPLETA TUS PREFERENCIAS</h4>
                 <h5 className="areasInt">Selecciona tus áreas de interés</h5>
 
                 <div className="container">
                 <div className="row">
-                    <button className="activity">Museo</button>
+                    <button className="activity" id="selectedColor">Museo</button>
                     <button className="activity">Patrimonio Cultural</button>
-                    <button className="activity">Música</button>
+                    <button className="activity" id="selectedColor">Música</button>
                     </div>
                     
                     <div className="row">
                         <button className="activity">Gastronomía</button>
-                        <button className="activity">Artes Visuales</button>
-                        <button className="activity">Danza</button>
-                        <button className="activity">Diseño</button>
+                        <button className="activity" id="selectedColor">Artes Visuales</button>
+                        <button className="activity" >Danza</button>
+                        <button className="activity" id="selectedColor">Diseño</button>
                         <button className="activity">Ciencias</button>
-                        <button className="activity">Migrantes</button>
-                        
+                        <button className="activity">Migrantes</button> 
                     </div>
 
                     <div className="row">
                         <button className="activity">Literatura</button>
                         <button className="activity">Teatro</button>
                         <button className="activity">Fotografía</button>
-                        <button className="activity">Cine</button>
+                        <button className="activity" id="selectedColor">Cine</button>
                     </div>
                     </div>
                     <h5 className="areasInt">¿Actividades a cuántos Km, desde tu ubicación, quieres que te notifiquemos?</h5>
