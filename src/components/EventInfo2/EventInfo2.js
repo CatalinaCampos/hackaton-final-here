@@ -17,7 +17,7 @@ class EventInfo2 extends Component {
                 <div className="eventInfo">
                     <nav className="details">
 
-                        <img src={flecha} alt="arrow" className="arrow" onClick={this.props.onChangeViewHome} />
+                        <img src={flecha} alt="arrow" className="arrow" onClick={this.props.onChangeBackArrow} />
                         <h3 className="h3Activity">DETALLES DE LA ACTIVIDAD</h3>
                     </nav>
                     <div className="detailsEvent">
@@ -32,17 +32,17 @@ class EventInfo2 extends Component {
                             Av. Recoleta 683, Estación de Metro Cerro Blanco, Línea 2.
                             </div>
                             <br />
-                            <img src={tiempo} alt="" className="time" />
+                            <img src={tiempo} alt="time" className="time" />
                             <div className="timeP">
                             Martes a viernes, de 10:00 a 17:30 horas.
                             </div>
                             <br />
-                            <img src={precio} alt="" className="price" />
+                            <img src={precio} alt="price" className="price" />
                             <div className="priceP">
                                 Gratis
                             </div>
                             <br />
-                            <img src={calendario} alt="" className="calendar" />
+                            <img src={calendario} alt="calendar" className="calendar" />
                             <div className="calendarP">
                             16 noviembre - 31 mayo
                             </div>

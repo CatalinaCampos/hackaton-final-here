@@ -1,6 +1,7 @@
 import React from 'react';
-import { faGrimace } from '@fortawesome/free-solid-svg-icons';
-import { faAdobe } from '@fortawesome/free-brands-svg-icons';
+//import { faGrimace } from '@fortawesome/free-solid-svg-icons';
+//import { faAdobe } from '@fortawesome/free-brands-svg-icons';
+
 // import { Marker } from 'react-leaflet';
 import Modal from 'react-responsive-modal';
 
@@ -21,8 +22,8 @@ export default class Map extends React.Component {
                 lng: props.lng,
             },
             zoom: props.zoom,
+            
         }
-
     }
 
     onOpenModal = () => {
@@ -53,48 +54,66 @@ export default class Map extends React.Component {
 
         // Create a marker for the point:
         
-        this.startMarker1 = new window.H.map.Marker({
-            lat: -33.4171066,
-            lng: -70.6395131,
+        var pngIcon = new window.H.map.Icon("https://i.imgur.com/MbZ6QdK.png", {size: {w: 50, h: 45}})
+        var pngIcon1 = new window.H.map.Icon("https://i.imgur.com/sLnNP8I.png", {size: {w: 50, h: 45}})
+        var pngIcon2 = new window.H.map.Icon("https://i.imgur.com/tduwYUo.png", {size: {w: 50, h: 45}})
+        // Create a marker for the point:
+
+        this.startMarker = new window.H.map.Marker({
+            lat: -33.41907,
+            lng: -70.641816,
+        }, {
+                icon: pngIcon
+            });
+
+        this.startMarker1 = new window.H.map.Marker({ /* Museo de muebles */
+            lat: -33.39471,
+            lng: -70.64264
+        }, {
+            icon: pngIcon1
         });
 
-
-        this.startMarker2 = new window.H.map.Marker({
-            lat: -33.4177695,
-            lng: -70.6507466,
-
+        this.startMarker2 = new window.H.map.Marker({ /* Heroinas */ 
+            lat: -33.417769,
+            lng: -70.650747
+        }, {
+            icon: pngIcon1
         });
 
-        this.startMarker3 = new window.H.map.Marker({
-            lat: -18.4716837,
-            lng: -70.2846041,
+        this.startMarker3 = new window.H.map.Marker({ /* La chascona PAGADO*/
+            lat: -33.43107,
+            lng: -70.60454
+        }, {
+            icon: pngIcon2
         });
 
-        this.startMarker4 = new window.H.map.Marker({
-            lat: -33.4262439,
-            lng: -70.6507595,
+        this.startMarker4 = new window.H.map.Marker({ /* Cementerio  */
+            lat: -33.4162901,
+            lng: -70.6483638,
+        }, {
+            icon: pngIcon1
         });
 
-        this.startMarker5 = new window.H.map.Marker({
-            lat: -33.4140072,
-            lng: -70.6436514,
+        this.startMarker5 = new window.H.map.Marker({ /* Recorrido cementerio */
+            lat: -33.3991974,
+            lng: -70.6428294,
+        }, {
+            icon: pngIcon1
         });
 
-        this.endMarker1 = new window.H.map.Marker({
+        /*this.endMarker1 = new window.H.map.Marker({
             lat: -33.4190702,
             lng: -70.6418162
-        });
+        });*/
+
+
+
+        this.map.addObjects([this.startMarker, this.startMarker1, this.startMarker2, this.startMarker3, this.startMarker4, this.startMarker5 /*this.endMarker1*/])
 
 
         this.map.addObjects([this.startMarker1, this.startMarker2, this.startMarker3, this.startMarker4, this.startMarker5, this.endMarker1 ])
 
         this.startMarker1.addEventListener('tap', function (evt) {
-        //     var bubble = new window.H.ui.open(evt.startMarker1.getPosition(this), {
-        //         content: evt.startMarker1.getData()
-        //     })
-        //     window.H.ui.addBubble(bubble);
-        // },false);
-            
             function showAlert(evt){
                 return alert("Museo-Patrimonio Culural, Ubicado en: Av Recoleta 683")
             }  
@@ -117,9 +136,9 @@ export default class Map extends React.Component {
         this.startMarker5.addEventListener('tap', function (evt) {
             alert("Recoleta Franciscana, Ubicado en: Av Recoleta 220")
         }, false);
-
-
+      
     }
+
 
     componentDidUpdate() {
 
@@ -203,7 +222,6 @@ export default class Map extends React.Component {
         }
     };
 
-
         // Get an instance of the routing service:
         this.router = this.platform.getRoutingService();
 
@@ -218,19 +236,21 @@ export default class Map extends React.Component {
     }
 
     render() {
-        
+
         return ( 
             <div>
         <div ref = "here-map"
             style = {
-                {
+
                     width: '100%',
                     height: '570px',
                     background: 'grey',
                     marginTop: '8%'
                 }
             } >
+
             </div>
+
         </div>
         );
     }

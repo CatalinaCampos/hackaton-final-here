@@ -1,75 +1,12 @@
-.profilePicture{
-    background-image: url(../../images/profilePicture.jpg);
-    position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 70px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5px;   
+.profile{
+    text-align: center;
+    border-bottom: 2px solid rgb(219, 216, 216);
+    height: 320px;
 }
 
-.profileName{
-    position: relative;
-    display: block;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 0px;
-}
-
-.activity{
-    position: relative;
-    background-color: #ffffff;
-    border-radius: 5px;
-    border-color: #FF2E63;
-    margin-top: 5px; 
-    display: block;
-    margin-left: 2%;
-    margin-right: 2%; 
-}
-
-.profileIcon{
-    padding: 0px;
-    margin-top: 35px;
-    margin-left: 2%;
-    width: 15%;
-    height: 15%;
-}
-
-#profileIconS{
-    padding: 0px;
-    margin-left: 0%;
-    width: 15%;
-    height: 15%;
-    margin: 2%;
-}
-#profileIconC{
-    padding: 0px;
-    width: 15%;
-    height: 15%;
-    margin-left: 3%
-}
-
-#eventNameC{
-    display: block;
-    margin: 2%;
-    margin-top: 2%;
-    padding-top: 7px;
-    
-}
-
-.eventName{
-    padding: 0px;
-    margin-top: 55px;
-    margin-right: auto;
-    padding-left: 10px;
-    
-}
-
-#eventNames{
-    margin: 0%;
-    padding-top: 15px;  
+.profileNav{
+    border-bottom: 2px solid rgb(219, 216, 216);
+    width: 100%;
 }
 
 .perfil{
@@ -78,24 +15,92 @@
     font-size: 20px;
     font-weight: bold;
     padding-top: 45px;
+    margin-left: 10%
+}
+
+.profilePicture{
+    border-radius: 700px;
+    width: 120px;
+    margin-top: 25px;
+    margin-left: auto; /* Los deja centrados */
+    margin-right: auto;
+    text-align: left;
 
 }
 
+.pName{
+    margin-top: 1%;
+    font-size: 20px
+}
 
-/* MEDIA */
-/* Smartphones (portrait) */
-@media only screen and (min-width : 321px) and (max-width : 480px){
+.memory, .museum, .cultural, .cine, .literature {
+    border: 0.5px solid #FF2E63;
+    border-radius: 5px;
+}
+
+.memory{
+    width: 150px;
+}
+.museum{
+    width: 64px;
+    margin-left: 10px
+}
+.cultural{
+    width: 165px;
+}
+.cine{
+    width: 45px;
+    margin-left: 10px
+}
+.literature{
+    width: 90px;
+}
+
+.preferences1{
+    display: flex;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.preferences2{
+    display: flex;
+    width: 60%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto
 
 }
-/* iPads (portrait) */
-@media only screen and (min-width : 767px) and (max-width : 1000px)
-and (orientation : portrait){
 
+.preferences3{
+    display: grid;
+    width: 60%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: auto;
 }
-/* Desktop */
-@media only screen and (min-width : 1024px) and (max-width : 1366px){
 
+.preferences3 > div {
+    margin-left: auto;
+    margin-right: auto;
 }
-@media only screen and (min-width: 950px){
 
+.marks{
+    width: 40px;
+    display: grid;
+    margin-top: 20px;
+    margin-left: 40px
+}
+
+.pSettings{
+    display: grid;
+    margin-top: -170px;
+    margin-left: 100px;
+    font-weight: bold;
+}
+
+.pSettings > p {
+    margin-top: 20px
 }

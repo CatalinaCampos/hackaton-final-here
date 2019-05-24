@@ -17,7 +17,7 @@ class EventInfo2 extends Component {
                 <div className="eventInfo">
                     <nav className="details">
 
-                        <img src={flecha} alt="arrow" className="arrow" onClick={this.props.onChangeViewHome} />
+                        <img src={flecha} alt="arrow" className="arrow" onClick={this.props.onChangeBackArrow} />
                         <h3 className="h3Activity">DETALLES DE LA ACTIVIDAD</h3>
                     </nav>
                     <div className="detailsEvent">
@@ -32,17 +32,17 @@ class EventInfo2 extends Component {
                                 Fernando Márquez de la Plata 0192, Barrio Bellavista, Providencia, Santiago.
                             </div>
                             <br />
-                            <img src={tiempo} alt="" className="time" />
+                            <img src={tiempo} alt="time" className="time" />
                             <div className="timeP">
                                 Marzo a Diciembre: martes a domingo, de 10:00 a 18:00 hrs.
                             </div>
                             <br />
-                            <img src={precio} alt="" className="price" />
+                            <img src={precio} alt="price" className="price" />
                             <div className="priceP">
                                 $7000
                             </div>
                             <br />
-                            <img src={calendario} alt="" className="calendar" />
+                            <img src={calendario} alt="calendar" className="calendar" />
                             <div className="calendarP">
                                 02 enero - 31 diciembre
                             </div>
